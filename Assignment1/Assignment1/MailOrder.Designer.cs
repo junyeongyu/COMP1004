@@ -246,7 +246,9 @@
             this.Controls.Add(this.totalHoursWorkedLabel);
             this.Controls.Add(this.employeeIdLabel);
             this.Controls.Add(this.employeeNameLabel);
+            this.MaximizeBox = false;
             this.Name = "MailOrder";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sales Bonus";
             this.Load += new System.EventHandler(this.MailOrder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();

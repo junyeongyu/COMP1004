@@ -162,6 +162,7 @@ namespace Assignment1
         }
         private String getCurrency(Double number)
         {
+            // return number.ToString("C");
             return String.Format(System.Globalization.CultureInfo.CurrentCulture, "{0:C2}", number);
         }
 
