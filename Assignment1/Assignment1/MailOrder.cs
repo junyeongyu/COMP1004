@@ -20,11 +20,11 @@ namespace Assignment1
     public partial class MailOrder : System.Windows.Forms.Form
     {
         private double _currentTotalMonthlySales = 0; // Current Total Monthly Sales
-
+        
         public MailOrder()
         {
             InitializeComponent();
-        }
+        } 
 
         private void MailOrder_Load(object sender, EventArgs e)
         {
@@ -36,19 +36,19 @@ namespace Assignment1
         {
             if (employeeNameTextBox.Text.Trim() == String.Empty)
             {
-                MessageBox.Show("Employee Name Needs to be entered.");
+                MessageBox.Show(Messages.popupEmployeeNameNeedsToBeEntered);
                 return;
             } else if (employeeIdTextBox.Text.Trim() == String.Empty)
             {
-                MessageBox.Show("Employee ID Needs to be entered.");
+                MessageBox.Show(Messages.popupEmployeeIdNeedsToBeEntered);
                 return;
             } else if (totalHoursWorkedTextBox.Text.Trim() == String.Empty)
             {
-                MessageBox.Show("Total Hours Worked Needs to be entered.");
+                MessageBox.Show(Messages.popupTotalHoursWorkedNeedsToBeEntered);
                 return;
             } else if (totalMonthlySalesTextBox.Text.Trim() == String.Empty)
             {
-                MessageBox.Show("Total Monthly Sales Needs to be entered.");
+                MessageBox.Show(Messages.popupTotalMonthlySalesNeedsToBeEntered);
                 return;
             }
 
@@ -68,21 +68,14 @@ namespace Assignment1
 
         private void printButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("The form you filled up is being sent to the printer.");
+            MessageBox.Show(Messages.popupTheFormYouFilledUpIsBeingSentToThePrinter);
         }
 
         private void englishRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             if (((RadioButton)sender).Checked) {
-                languageGroupBox.Text = "Languages";
-                employeeNameLabel.Text = "Employee's Name :";
-                employeeIdLabel.Text = "Employee ID :";
-                totalHoursWorkedLabel.Text = "Total Hours Worked :";
-                totalMonthlySalesLabel.Text = "Total Monthly Sales :";
-                salesBonusLabel.Text = "Sales Bonus :";
-                calculateButton.Text = "Calculate";
-                nextButton.Text = "Next";
-                printButton.Text = "Print";
+                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en-US");
+                refreshLabel();
             }
         }
 
@@ -90,15 +83,8 @@ namespace Assignment1
         {
             if (((RadioButton)sender).Checked)
             {
-                languageGroupBox.Text = "Langues";
-                employeeNameLabel.Text = "Le nom de l'employé :";
-                employeeIdLabel.Text = "ID employé :";
-                totalHoursWorkedLabel.Text = "Nombre total d'heures travaillées :";
-                totalMonthlySalesLabel.Text = "Total des ventes mensuelles :";
-                salesBonusLabel.Text = "Bonus de vente :";
-                calculateButton.Text = "Calculer";
-                nextButton.Text = "Prochain";
-                printButton.Text = "Impression";
+                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("fr-FR");
+                refreshLabel();
             }
         }
 
@@ -106,16 +92,23 @@ namespace Assignment1
         {
             if (((RadioButton)sender).Checked)
             {
-                languageGroupBox.Text = "Idiomas";
-                employeeNameLabel.Text = "Nombre del empleado :";
-                employeeIdLabel.Text = "ID de empleado :";
-                totalHoursWorkedLabel.Text = "Total de horas trabajadas :";
-                totalMonthlySalesLabel.Text = "Total de ventas mensuales :";
-                salesBonusLabel.Text = "Bono de ventas :";
-                calculateButton.Text = "Calcular";
-                nextButton.Text = "Siguiente";
-                printButton.Text = "Impresión";
+                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("es-ES");
+                refreshLabel();
             }
+        }
+
+        private void refreshLabel()
+        {
+            languageGroupBox.Text = Messages.languageGroupBox;
+            employeeNameLabel.Text = Messages.employeeNameLabel;
+            employeeIdLabel.Text = Messages.employeeIdLabel;
+            totalHoursWorkedLabel.Text = Messages.totalHoursWorkedLabel;
+            totalMonthlySalesLabel.Text = Messages.totalMonthlySalesLabel;
+            salesBonusLabel.Text = Messages.salesBonusLabel;
+            calculateButton.Text = Messages.calculateButton;
+            nextButton.Text = Messages.nextButton;
+            printButton.Text = Messages.printButton;
+            this.Text = Messages.salesBonusThisForm;
         }
 
         private void totalHoursWorkedTextBox_TextChanged(object sender, EventArgs e)
@@ -129,14 +122,14 @@ namespace Assignment1
             double number;
             if (double.TryParse(text, out number) == false)
             {
-                MessageBox.Show("You need to put the positive number.");
+                MessageBox.Show(Messages.popupYouNeedToPutThePositiveNumber);
                 totalHoursWorkedTextBox.Text = String.Empty;
                 return;
             }
 
             if (number > 160)
             {
-                MessageBox.Show("You shouldn't put more than 160 hours.");
+                MessageBox.Show(Messages.popupYouShouldNotPutMoreThan160Hours);
                 totalHoursWorkedTextBox.Text = String.Empty;
                 return;
             }
@@ -152,7 +145,7 @@ namespace Assignment1
             }
             if (value < 0)
             {
-                MessageBox.Show("You need to put the positive number.");
+                MessageBox.Show(Messages.popupYouNeedToPutThePositiveNumber);
                 totalMonthlySalesTextBox.Text = String.Empty;
                 return;
             }
