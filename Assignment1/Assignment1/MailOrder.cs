@@ -1,9 +1,9 @@
 ﻿/**
- * The App name: Sharp Mail Order – SALES BONUS
+ * The class name: MaidOrder
  * Author's name: Junyeong Yu (200328206)
- * App Creation Date: January 16, 2017
- * App Last Modification Date: January 24, 2017
- * App description: Calulate the bonus using MailOrder Form.
+ * Class Creation Date: January 16, 2017
+ * Class Last Modification Date: January 24, 2017
+ * Class description: Calulate the bonus using MailOrder Form.
  */
 using System;
 using System.Collections.Generic;
