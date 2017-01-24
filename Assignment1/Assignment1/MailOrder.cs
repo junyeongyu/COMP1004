@@ -1,8 +1,8 @@
 ﻿/**
- * 
  * The App name: Sharp Mail Order – SALES BONUS
- * Author's name: Junyeong Yu
- * App Creation Date: January 24, 2017
+ * Author's name: Junyeong Yu (200328206)
+ * App Creation Date: January 16, 2017
+ * App Last Modification Date: January 24, 2017
  * App description: Calulate the bonus using MailOrder Form.
  */
 using System;
