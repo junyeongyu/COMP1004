@@ -247,6 +247,8 @@
             this.Controls.Add(this.employeeIdLabel);
             this.Controls.Add(this.employeeNameLabel);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(396, 384);
+            this.MinimumSize = new System.Drawing.Size(396, 384);
             this.Name = "MailOrder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sales Bonus";
