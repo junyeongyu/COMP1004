@@ -127,11 +127,13 @@
             this.basePriceTextBox.Name = "basePriceTextBox";
             this.basePriceTextBox.Size = new System.Drawing.Size(100, 20);
             this.basePriceTextBox.TabIndex = 7;
+            this.basePriceTextBox.TextChanged += new System.EventHandler(this.basePriceTextBox_TextChanged);
             // 
             // additionalOptionsTextBox
             // 
             this.additionalOptionsTextBox.Location = new System.Drawing.Point(137, 69);
             this.additionalOptionsTextBox.Name = "additionalOptionsTextBox";
+            this.additionalOptionsTextBox.ReadOnly = true;
             this.additionalOptionsTextBox.Size = new System.Drawing.Size(100, 20);
             this.additionalOptionsTextBox.TabIndex = 8;
             // 
@@ -139,6 +141,7 @@
             // 
             this.subTotalTextBox.Location = new System.Drawing.Point(137, 95);
             this.subTotalTextBox.Name = "subTotalTextBox";
+            this.subTotalTextBox.ReadOnly = true;
             this.subTotalTextBox.Size = new System.Drawing.Size(100, 20);
             this.subTotalTextBox.TabIndex = 9;
             this.subTotalTextBox.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
@@ -147,6 +150,7 @@
             // 
             this.salesTaxTextBox.Location = new System.Drawing.Point(137, 121);
             this.salesTaxTextBox.Name = "salesTaxTextBox";
+            this.salesTaxTextBox.ReadOnly = true;
             this.salesTaxTextBox.Size = new System.Drawing.Size(100, 20);
             this.salesTaxTextBox.TabIndex = 10;
             // 
@@ -154,6 +158,7 @@
             // 
             this.totalTextBox.Location = new System.Drawing.Point(137, 147);
             this.totalTextBox.Name = "totalTextBox";
+            this.totalTextBox.ReadOnly = true;
             this.totalTextBox.Size = new System.Drawing.Size(100, 20);
             this.totalTextBox.TabIndex = 11;
             // 
@@ -163,11 +168,13 @@
             this.tradeInAllowanceTextBox.Name = "tradeInAllowanceTextBox";
             this.tradeInAllowanceTextBox.Size = new System.Drawing.Size(100, 20);
             this.tradeInAllowanceTextBox.TabIndex = 12;
+            this.tradeInAllowanceTextBox.Text = "0";
             // 
             // amountDueTextBox
             // 
             this.amountDueTextBox.Location = new System.Drawing.Point(137, 199);
             this.amountDueTextBox.Name = "amountDueTextBox";
+            this.amountDueTextBox.ReadOnly = true;
             this.amountDueTextBox.Size = new System.Drawing.Size(100, 20);
             this.amountDueTextBox.TabIndex = 13;
             // 
@@ -255,6 +262,7 @@
             // standardRadioButton
             // 
             this.standardRadioButton.AutoSize = true;
+            this.standardRadioButton.Checked = true;
             this.standardRadioButton.Location = new System.Drawing.Point(20, 19);
             this.standardRadioButton.Name = "standardRadioButton";
             this.standardRadioButton.Size = new System.Drawing.Size(68, 17);

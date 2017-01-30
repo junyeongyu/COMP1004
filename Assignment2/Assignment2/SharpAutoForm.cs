@@ -26,5 +26,10 @@ namespace Assignment2
         {
 
         }
+
+        private void basePriceTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
