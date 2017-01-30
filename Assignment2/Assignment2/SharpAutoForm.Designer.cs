@@ -74,7 +74,6 @@
             this.additionalOptionsLabel.Size = new System.Drawing.Size(98, 13);
             this.additionalOptionsLabel.TabIndex = 1;
             this.additionalOptionsLabel.Text = "Additional Options :";
-            this.additionalOptionsLabel.Click += new System.EventHandler(this.label2_Click);
             // 
             // subTotalLabel
             // 
@@ -127,7 +126,6 @@
             this.basePriceTextBox.Name = "basePriceTextBox";
             this.basePriceTextBox.Size = new System.Drawing.Size(100, 20);
             this.basePriceTextBox.TabIndex = 7;
-            this.basePriceTextBox.TextChanged += new System.EventHandler(this.basePriceTextBox_TextChanged);
             // 
             // additionalOptionsTextBox
             // 
@@ -144,7 +142,6 @@
             this.subTotalTextBox.ReadOnly = true;
             this.subTotalTextBox.Size = new System.Drawing.Size(100, 20);
             this.subTotalTextBox.TabIndex = 9;
-            this.subTotalTextBox.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // salesTaxTextBox
             // 

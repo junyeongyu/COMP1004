@@ -16,20 +16,5 @@ namespace Assignment2
         {
             InitializeComponent();
         }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void basePriceTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
