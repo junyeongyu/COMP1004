@@ -35,7 +35,9 @@ namespace Assignment2
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This program calculates the amount due on a New or Used Vehicle based on accessories and options");
+            AboutForm aboutForm = new AboutForm();
+            aboutForm.ShowDialog();
+            //MessageBox.Show("This program calculates the amount due on a New or Used Vehicle based on accessories and options.");
         }
 
         private void stereoSystemCheckBox_CheckedChanged(object sender, EventArgs e)
