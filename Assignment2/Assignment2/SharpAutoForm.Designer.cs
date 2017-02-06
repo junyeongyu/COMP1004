@@ -145,6 +145,7 @@
             this.additionalOptionsTextBox.ReadOnly = true;
             this.additionalOptionsTextBox.Size = new System.Drawing.Size(100, 20);
             this.additionalOptionsTextBox.TabIndex = 8;
+            this.additionalOptionsTextBox.Text = "0";
             // 
             // subTotalTextBox
             // 
@@ -207,7 +208,7 @@
             this.computerNavigationCheckBox.TabIndex = 2;
             this.computerNavigationCheckBox.Text = "Computer Navigation";
             this.computerNavigationCheckBox.UseVisualStyleBackColor = true;
-            this.computerNavigationCheckBox.CheckedChanged += new System.EventHandler(this.computerNavigationCheckBox_CheckedChanged);
+            this.computerNavigationCheckBox.CheckedChanged += new System.EventHandler(this._computerNavigationCheckBox_CheckedChanged);
             // 
             // leatherInteriorCheckBox
             // 
@@ -218,7 +219,7 @@
             this.leatherInteriorCheckBox.TabIndex = 1;
             this.leatherInteriorCheckBox.Text = "Leather Interior";
             this.leatherInteriorCheckBox.UseVisualStyleBackColor = true;
-            this.leatherInteriorCheckBox.CheckedChanged += new System.EventHandler(this.leatherInteriorCheckBox_CheckedChanged);
+            this.leatherInteriorCheckBox.CheckedChanged += new System.EventHandler(this._leatherInteriorCheckBox_CheckedChanged);
             // 
             // stereoSystemCheckBox
             // 
@@ -229,7 +230,7 @@
             this.stereoSystemCheckBox.TabIndex = 0;
             this.stereoSystemCheckBox.Text = "Stereo System";
             this.stereoSystemCheckBox.UseVisualStyleBackColor = true;
-            this.stereoSystemCheckBox.CheckedChanged += new System.EventHandler(this.stereoSystemCheckBox_CheckedChanged);
+            this.stereoSystemCheckBox.CheckedChanged += new System.EventHandler(this._stereoSystemCheckBox_CheckedChanged);
             // 
             // groupBox2
             // 
@@ -253,7 +254,7 @@
             this.customizedDetailingRadioButton.TabStop = true;
             this.customizedDetailingRadioButton.Text = "Customized Detailing";
             this.customizedDetailingRadioButton.UseVisualStyleBackColor = true;
-            this.customizedDetailingRadioButton.CheckedChanged += new System.EventHandler(this.customizedDetailingRadioButton_CheckedChanged);
+            this.customizedDetailingRadioButton.CheckedChanged += new System.EventHandler(this._customizedDetailingRadioButton_CheckedChanged);
             // 
             // pearlizedRadioButton
             // 
@@ -265,7 +266,7 @@
             this.pearlizedRadioButton.TabStop = true;
             this.pearlizedRadioButton.Text = "Pearlized";
             this.pearlizedRadioButton.UseVisualStyleBackColor = true;
-            this.pearlizedRadioButton.CheckedChanged += new System.EventHandler(this.pearlizedRadioButton_CheckedChanged);
+            this.pearlizedRadioButton.CheckedChanged += new System.EventHandler(this._pearlizedRadioButton_CheckedChanged);
             // 
             // standardRadioButton
             // 
@@ -278,7 +279,7 @@
             this.standardRadioButton.TabStop = true;
             this.standardRadioButton.Text = "Standard";
             this.standardRadioButton.UseVisualStyleBackColor = true;
-            this.standardRadioButton.CheckedChanged += new System.EventHandler(this.standardRadioButton_CheckedChanged);
+            this.standardRadioButton.CheckedChanged += new System.EventHandler(this._standardRadioButton_CheckedChanged);
             // 
             // caculateButton
             // 
@@ -288,6 +289,7 @@
             this.caculateButton.TabIndex = 16;
             this.caculateButton.Text = "Caculate";
             this.caculateButton.UseVisualStyleBackColor = true;
+            this.caculateButton.Click += new System.EventHandler(this._caculateButton_Click);
             // 
             // clearButton
             // 
@@ -297,6 +299,7 @@
             this.clearButton.TabIndex = 17;
             this.clearButton.Text = "Clear";
             this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this._clearButton_Click);
             // 
             // exitButton
             // 
@@ -306,6 +309,7 @@
             this.exitButton.TabIndex = 18;
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this._exitButton_Click);
             // 
             // menuStrip1
             // 
@@ -334,6 +338,7 @@
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.X)));
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this._exitButton_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -353,6 +358,7 @@
             this.calculateToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.C)));
             this.calculateToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.calculateToolStripMenuItem.Text = "&Calculate";
+            this.calculateToolStripMenuItem.Click += new System.EventHandler(this._caculateButton_Click);
             // 
             // clearToolStripMenuItem
             // 
@@ -360,6 +366,7 @@
             this.clearToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.L)));
             this.clearToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.clearToolStripMenuItem.Text = "C&lear";
+            this.clearToolStripMenuItem.Click += new System.EventHandler(this._clearButton_Click);
             // 
             // fontToolStripMenuItem
             // 
@@ -388,9 +395,9 @@
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.A)));
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.aboutToolStripMenuItem.Text = "&About";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this._aboutToolStripMenuItem_Click);
             // 
             // SharpAutoForm
             // 
