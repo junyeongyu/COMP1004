@@ -207,6 +207,7 @@
             this.computerNavigationCheckBox.TabIndex = 2;
             this.computerNavigationCheckBox.Text = "Computer Navigation";
             this.computerNavigationCheckBox.UseVisualStyleBackColor = true;
+            this.computerNavigationCheckBox.CheckedChanged += new System.EventHandler(this.computerNavigationCheckBox_CheckedChanged);
             // 
             // leatherInteriorCheckBox
             // 
@@ -217,6 +218,7 @@
             this.leatherInteriorCheckBox.TabIndex = 1;
             this.leatherInteriorCheckBox.Text = "Leather Interior";
             this.leatherInteriorCheckBox.UseVisualStyleBackColor = true;
+            this.leatherInteriorCheckBox.CheckedChanged += new System.EventHandler(this.leatherInteriorCheckBox_CheckedChanged);
             // 
             // stereoSystemCheckBox
             // 
@@ -227,6 +229,7 @@
             this.stereoSystemCheckBox.TabIndex = 0;
             this.stereoSystemCheckBox.Text = "Stereo System";
             this.stereoSystemCheckBox.UseVisualStyleBackColor = true;
+            this.stereoSystemCheckBox.CheckedChanged += new System.EventHandler(this.stereoSystemCheckBox_CheckedChanged);
             // 
             // groupBox2
             // 
@@ -250,6 +253,7 @@
             this.customizedDetailingRadioButton.TabStop = true;
             this.customizedDetailingRadioButton.Text = "Customized Detailing";
             this.customizedDetailingRadioButton.UseVisualStyleBackColor = true;
+            this.customizedDetailingRadioButton.CheckedChanged += new System.EventHandler(this.customizedDetailingRadioButton_CheckedChanged);
             // 
             // pearlizedRadioButton
             // 
@@ -261,6 +265,7 @@
             this.pearlizedRadioButton.TabStop = true;
             this.pearlizedRadioButton.Text = "Pearlized";
             this.pearlizedRadioButton.UseVisualStyleBackColor = true;
+            this.pearlizedRadioButton.CheckedChanged += new System.EventHandler(this.pearlizedRadioButton_CheckedChanged);
             // 
             // standardRadioButton
             // 
@@ -273,6 +278,7 @@
             this.standardRadioButton.TabStop = true;
             this.standardRadioButton.Text = "Standard";
             this.standardRadioButton.UseVisualStyleBackColor = true;
+            this.standardRadioButton.CheckedChanged += new System.EventHandler(this.standardRadioButton_CheckedChanged);
             // 
             // caculateButton
             // 
@@ -320,15 +326,14 @@
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F)));
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fileToolStripMenuItem.Text = "File";
-            this.fileToolStripMenuItem.Click += new System.EventHandler(this.fileToolStripMenuItem_Click);
+            this.fileToolStripMenuItem.Text = "&File";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.X)));
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Text = "E&xit";
             // 
             // editToolStripMenuItem
             // 
@@ -340,36 +345,35 @@
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.E)));
             this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
-            this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Text = "&Edit";
             // 
             // calculateToolStripMenuItem
             // 
             this.calculateToolStripMenuItem.Name = "calculateToolStripMenuItem";
             this.calculateToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.C)));
             this.calculateToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.calculateToolStripMenuItem.Text = "Calculate";
+            this.calculateToolStripMenuItem.Text = "&Calculate";
             // 
             // clearToolStripMenuItem
             // 
             this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
             this.clearToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.L)));
             this.clearToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.clearToolStripMenuItem.Text = "Clear";
+            this.clearToolStripMenuItem.Text = "C&lear";
             // 
             // fontToolStripMenuItem
             // 
             this.fontToolStripMenuItem.Name = "fontToolStripMenuItem";
             this.fontToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F)));
             this.fontToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.fontToolStripMenuItem.Text = "Font ...";
+            this.fontToolStripMenuItem.Text = "&Font ...";
             // 
             // colorToolStripMenuItem
             // 
             this.colorToolStripMenuItem.Name = "colorToolStripMenuItem";
             this.colorToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.O)));
             this.colorToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.colorToolStripMenuItem.Text = "Color ...";
-            this.colorToolStripMenuItem.Click += new System.EventHandler(this.colorToolStripMenuItem_Click);
+            this.colorToolStripMenuItem.Text = "C&olor ...";
             // 
             // helpToolStripMenuItem
             // 
@@ -378,14 +382,15 @@
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.H)));
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.Text = "&Help";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.A)));
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Text = "&About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // SharpAutoForm
             // 
@@ -415,6 +420,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "SharpAutoForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Auto Center";
             this.additionalItemsGroupBox.ResumeLayout(false);
             this.additionalItemsGroupBox.PerformLayout();
