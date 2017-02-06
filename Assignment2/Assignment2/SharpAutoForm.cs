@@ -16,5 +16,15 @@ namespace Assignment2
         {
             InitializeComponent();
         }
+
+        private void colorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
