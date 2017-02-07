@@ -33,7 +33,7 @@ namespace Assignment2
         
         // Constructor
 
-        public SharpAutoForm()
+        public sharpAutoForm()
         {
             InitializeComponent();
         }
@@ -215,7 +215,20 @@ namespace Assignment2
                 basePriceTextBox.ForeColor = color;
             }
         }
-        
+
+        private void _sharpAutoForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure?", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (result == DialogResult.OK)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+        }
+
         //  General Functions
 
         private void _refreshAdditionalOptionsTextBox()

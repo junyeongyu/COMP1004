@@ -458,7 +458,7 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(235, 219);
             this.tableLayoutPanel1.TabIndex = 20;
             // 
-            // SharpAutoForm
+            // sharpAutoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -472,9 +472,10 @@
             this.Controls.Add(this.sharpAutoCenterMenuStrip);
             this.MainMenuStrip = this.sharpAutoCenterMenuStrip;
             this.MaximizeBox = false;
-            this.Name = "SharpAutoForm";
+            this.Name = "sharpAutoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Auto Center";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this._sharpAutoForm_FormClosing);
             this.additionalItemsGroupBox.ResumeLayout(false);
             this.additionalItemsGroupBox.PerformLayout();
             this.groupBox2.ResumeLayout(false);
