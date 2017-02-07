@@ -1,4 +1,11 @@
-﻿using System;
+﻿/**
+ * The class name: AboutForm
+ * Author's name: Junyeong Yu (200328206)
+ * Class Creation Date: January 30, 2017
+ * Class Last Modification Date: February 7, 2017
+ * Class description: Show assembly information for this application.
+ */
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;

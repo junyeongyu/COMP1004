@@ -1,4 +1,11 @@
-﻿using System;
+﻿/**
+ * The class name: SharpAutoForm
+ * Author's name: Junyeong Yu (200328206)
+ * Class Creation Date: January 30, 2017
+ * Class Last Modification Date: February 7, 2017
+ * Class description: Calulate the Total Amount Due using SharpAutoForm.
+ */
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +26,7 @@ namespace Assignment2
         private const double _LEATHER_INTERIOR_PRICE = 987.41;
         private const double _COMPUTER_NAVIGATION_PRICE = 1741.23;
         private ISet<double> _currentAdditionalItemsPriceSet = new HashSet<double>(); // Can be used when only value is different
-        //private double _currentAdditionalItemsPrice; // Not Used due to Plus Minus Bug
+        //private double _currentAdditionalItemsPrice; // Not Used due to Plus Minus Bug for double type
 
         // Exterior Finishes
         private const double _STANDARD_PRICE = 0.0;
@@ -32,7 +39,6 @@ namespace Assignment2
         
         
         // Constructor
-
         public SharpAutoForm()
         {
             InitializeComponent();
@@ -43,6 +49,11 @@ namespace Assignment2
 
         //  Event Handlers
         
+        /// <summary>
+        /// Show About Information for the application.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void _aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AboutForm aboutForm = new AboutForm();
@@ -50,6 +61,11 @@ namespace Assignment2
             //MessageBox.Show("This program calculates the amount due on a New or Used Vehicle based on accessories and options.");
         }
 
+        /// <summary>
+        /// Add or Subtract Strero System Price from current value in Addtional Items Textbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void _stereoSystemCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (stereoSystemCheckBox.Checked)
@@ -62,6 +78,11 @@ namespace Assignment2
             _refreshAdditionalOptionsTextBox();
         }
 
+        /// <summary>
+        /// Add or Subtract Leather Interior Price from current value in Addtional Items Textbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void _leatherInteriorCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (leatherInteriorCheckBox.Checked)
@@ -75,6 +96,11 @@ namespace Assignment2
             _refreshAdditionalOptionsTextBox();
         }
 
+        /// <summary>
+        /// Add or Subtract Computer Navigation Price from current value in Addtional Items Textbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void _computerNavigationCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (computerNavigationCheckBox.Checked)
@@ -88,6 +114,11 @@ namespace Assignment2
             _refreshAdditionalOptionsTextBox();
         }
 
+        /// <summary>
+        /// Adopt Standard Price in Exterior Finishes into Addtional Items Textbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void _standardRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             if (standardRadioButton.Checked)
@@ -97,6 +128,11 @@ namespace Assignment2
             _refreshAdditionalOptionsTextBox();
         }
 
+        /// <summary>
+        /// Adopt Pearlized Price in Exterior Finishes into Addtional Items Textbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void _pearlizedRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             if (pearlizedRadioButton.Checked)
@@ -106,6 +142,11 @@ namespace Assignment2
             _refreshAdditionalOptionsTextBox();
         }
 
+        /// <summary>
+        /// Adopt Customized Detailing Price in Exterior Finishes into Addtional Items Textbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void _customizedDetailingRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             if (customizedDetailingRadioButton.Checked)
@@ -115,6 +156,11 @@ namespace Assignment2
             _refreshAdditionalOptionsTextBox();
         }
 
+        /// <summary>
+        /// Validate input data, Calculate Amount Due based on input data.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void _caculateButton_Click(object sender, EventArgs e)
         {
             // Validations
@@ -177,7 +223,7 @@ namespace Assignment2
             double total = subTotal + salesTax;
             totalTextBox.Text = total.ToString();
 
-            // Amout Due = Total - Trade in allowance
+            // Amount Due = Total - Trade in allowance
             double amountDue = total - tradeInAllowance;
             amountDueTextBox.Text = amountDue.ToString();
         }
@@ -192,6 +238,11 @@ namespace Assignment2
             this.Close();
         }
 
+        /// <summary>
+        /// Adopt font information chose by user.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void _fontToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult result = sharpAutoCenterFontDialog.ShowDialog();
@@ -204,6 +255,11 @@ namespace Assignment2
             }
         }
 
+        /// <summary>
+        /// Adopt color information chose by user.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void _colorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult result = sharpAutoCenterColorDialog.ShowDialog();
