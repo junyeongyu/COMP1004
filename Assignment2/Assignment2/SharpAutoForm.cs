@@ -192,7 +192,7 @@ namespace Assignment2
             this.Close();
         }
 
-        private void fontToolStripMenuItem_Click(object sender, EventArgs e)
+        private void _fontToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult result = sharpAutoCenterFontDialog.ShowDialog();
             if (result == DialogResult.OK)
@@ -204,7 +204,7 @@ namespace Assignment2
             }
         }
 
-        private void colorToolStripMenuItem_Click(object sender, EventArgs e)
+        private void _colorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult result = sharpAutoCenterColorDialog.ShowDialog();
             if (result == DialogResult.OK)

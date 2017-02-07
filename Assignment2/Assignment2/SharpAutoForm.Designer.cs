@@ -65,24 +65,29 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sharpAutoCenterFontDialog = new System.Windows.Forms.FontDialog();
             this.sharpAutoCenterColorDialog = new System.Windows.Forms.ColorDialog();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.additionalItemsGroupBox.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.sharpAutoCenterMenuStrip.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // basePriceLabel
             // 
+            this.basePriceLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.basePriceLabel.AutoSize = true;
-            this.basePriceLabel.Location = new System.Drawing.Point(67, 49);
+            this.basePriceLabel.Location = new System.Drawing.Point(45, 7);
             this.basePriceLabel.Name = "basePriceLabel";
             this.basePriceLabel.Size = new System.Drawing.Size(64, 13);
             this.basePriceLabel.TabIndex = 0;
             this.basePriceLabel.Text = "Base Price :";
+            this.basePriceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // additionalOptionsLabel
             // 
+            this.additionalOptionsLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.additionalOptionsLabel.AutoSize = true;
-            this.additionalOptionsLabel.Location = new System.Drawing.Point(33, 75);
+            this.additionalOptionsLabel.Location = new System.Drawing.Point(11, 34);
             this.additionalOptionsLabel.Name = "additionalOptionsLabel";
             this.additionalOptionsLabel.Size = new System.Drawing.Size(98, 13);
             this.additionalOptionsLabel.TabIndex = 1;
@@ -90,8 +95,9 @@
             // 
             // subTotalLabel
             // 
+            this.subTotalLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.subTotalLabel.AutoSize = true;
-            this.subTotalLabel.Location = new System.Drawing.Point(75, 101);
+            this.subTotalLabel.Location = new System.Drawing.Point(53, 61);
             this.subTotalLabel.Name = "subTotalLabel";
             this.subTotalLabel.Size = new System.Drawing.Size(56, 13);
             this.subTotalLabel.TabIndex = 2;
@@ -99,8 +105,9 @@
             // 
             // salesTaxLabel
             // 
+            this.salesTaxLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.salesTaxLabel.AutoSize = true;
-            this.salesTaxLabel.Location = new System.Drawing.Point(42, 127);
+            this.salesTaxLabel.Location = new System.Drawing.Point(20, 88);
             this.salesTaxLabel.Name = "salesTaxLabel";
             this.salesTaxLabel.Size = new System.Drawing.Size(89, 13);
             this.salesTaxLabel.TabIndex = 3;
@@ -108,8 +115,9 @@
             // 
             // totalLabel
             // 
+            this.totalLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.totalLabel.AutoSize = true;
-            this.totalLabel.Location = new System.Drawing.Point(94, 153);
+            this.totalLabel.Location = new System.Drawing.Point(72, 115);
             this.totalLabel.Name = "totalLabel";
             this.totalLabel.Size = new System.Drawing.Size(37, 13);
             this.totalLabel.TabIndex = 4;
@@ -117,8 +125,9 @@
             // 
             // tradeInAllowanceLabel
             // 
+            this.tradeInAllowanceLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.tradeInAllowanceLabel.AutoSize = true;
-            this.tradeInAllowanceLabel.Location = new System.Drawing.Point(27, 179);
+            this.tradeInAllowanceLabel.Location = new System.Drawing.Point(5, 142);
             this.tradeInAllowanceLabel.Name = "tradeInAllowanceLabel";
             this.tradeInAllowanceLabel.Size = new System.Drawing.Size(104, 13);
             this.tradeInAllowanceLabel.TabIndex = 5;
@@ -126,8 +135,9 @@
             // 
             // amountDueLabel
             // 
+            this.amountDueLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.amountDueLabel.AutoSize = true;
-            this.amountDueLabel.Location = new System.Drawing.Point(59, 204);
+            this.amountDueLabel.Location = new System.Drawing.Point(37, 170);
             this.amountDueLabel.Name = "amountDueLabel";
             this.amountDueLabel.Size = new System.Drawing.Size(72, 13);
             this.amountDueLabel.TabIndex = 6;
@@ -135,14 +145,16 @@
             // 
             // basePriceTextBox
             // 
-            this.basePriceTextBox.Location = new System.Drawing.Point(137, 46);
+            this.basePriceTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.basePriceTextBox.Location = new System.Drawing.Point(115, 3);
             this.basePriceTextBox.Name = "basePriceTextBox";
             this.basePriceTextBox.Size = new System.Drawing.Size(100, 20);
             this.basePriceTextBox.TabIndex = 7;
             // 
             // additionalOptionsTextBox
             // 
-            this.additionalOptionsTextBox.Location = new System.Drawing.Point(137, 72);
+            this.additionalOptionsTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.additionalOptionsTextBox.Location = new System.Drawing.Point(115, 30);
             this.additionalOptionsTextBox.Name = "additionalOptionsTextBox";
             this.additionalOptionsTextBox.ReadOnly = true;
             this.additionalOptionsTextBox.Size = new System.Drawing.Size(100, 20);
@@ -151,7 +163,8 @@
             // 
             // subTotalTextBox
             // 
-            this.subTotalTextBox.Location = new System.Drawing.Point(137, 98);
+            this.subTotalTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.subTotalTextBox.Location = new System.Drawing.Point(115, 57);
             this.subTotalTextBox.Name = "subTotalTextBox";
             this.subTotalTextBox.ReadOnly = true;
             this.subTotalTextBox.Size = new System.Drawing.Size(100, 20);
@@ -159,7 +172,8 @@
             // 
             // salesTaxTextBox
             // 
-            this.salesTaxTextBox.Location = new System.Drawing.Point(137, 124);
+            this.salesTaxTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.salesTaxTextBox.Location = new System.Drawing.Point(115, 84);
             this.salesTaxTextBox.Name = "salesTaxTextBox";
             this.salesTaxTextBox.ReadOnly = true;
             this.salesTaxTextBox.Size = new System.Drawing.Size(100, 20);
@@ -167,7 +181,8 @@
             // 
             // totalTextBox
             // 
-            this.totalTextBox.Location = new System.Drawing.Point(137, 150);
+            this.totalTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.totalTextBox.Location = new System.Drawing.Point(115, 111);
             this.totalTextBox.Name = "totalTextBox";
             this.totalTextBox.ReadOnly = true;
             this.totalTextBox.Size = new System.Drawing.Size(100, 20);
@@ -175,7 +190,8 @@
             // 
             // tradeInAllowanceTextBox
             // 
-            this.tradeInAllowanceTextBox.Location = new System.Drawing.Point(137, 176);
+            this.tradeInAllowanceTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tradeInAllowanceTextBox.Location = new System.Drawing.Point(115, 138);
             this.tradeInAllowanceTextBox.Name = "tradeInAllowanceTextBox";
             this.tradeInAllowanceTextBox.Size = new System.Drawing.Size(100, 20);
             this.tradeInAllowanceTextBox.TabIndex = 12;
@@ -183,7 +199,8 @@
             // 
             // amountDueTextBox
             // 
-            this.amountDueTextBox.Location = new System.Drawing.Point(137, 202);
+            this.amountDueTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.amountDueTextBox.Location = new System.Drawing.Point(115, 166);
             this.amountDueTextBox.Name = "amountDueTextBox";
             this.amountDueTextBox.ReadOnly = true;
             this.amountDueTextBox.Size = new System.Drawing.Size(100, 20);
@@ -194,7 +211,7 @@
             this.additionalItemsGroupBox.Controls.Add(this.computerNavigationCheckBox);
             this.additionalItemsGroupBox.Controls.Add(this.leatherInteriorCheckBox);
             this.additionalItemsGroupBox.Controls.Add(this.stereoSystemCheckBox);
-            this.additionalItemsGroupBox.Location = new System.Drawing.Point(267, 46);
+            this.additionalItemsGroupBox.Location = new System.Drawing.Point(265, 40);
             this.additionalItemsGroupBox.Name = "additionalItemsGroupBox";
             this.additionalItemsGroupBox.Size = new System.Drawing.Size(200, 100);
             this.additionalItemsGroupBox.TabIndex = 14;
@@ -239,7 +256,7 @@
             this.groupBox2.Controls.Add(this.customizedDetailingRadioButton);
             this.groupBox2.Controls.Add(this.pearlizedRadioButton);
             this.groupBox2.Controls.Add(this.standardRadioButton);
-            this.groupBox2.Location = new System.Drawing.Point(267, 165);
+            this.groupBox2.Location = new System.Drawing.Point(265, 159);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(200, 100);
             this.groupBox2.TabIndex = 15;
@@ -285,7 +302,7 @@
             // 
             // caculateButton
             // 
-            this.caculateButton.Location = new System.Drawing.Point(21, 285);
+            this.caculateButton.Location = new System.Drawing.Point(19, 285);
             this.caculateButton.Name = "caculateButton";
             this.caculateButton.Size = new System.Drawing.Size(75, 40);
             this.caculateButton.TabIndex = 16;
@@ -295,7 +312,7 @@
             // 
             // clearButton
             // 
-            this.clearButton.Location = new System.Drawing.Point(209, 285);
+            this.clearButton.Location = new System.Drawing.Point(205, 285);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(75, 40);
             this.clearButton.TabIndex = 17;
@@ -305,7 +322,7 @@
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(392, 285);
+            this.exitButton.Location = new System.Drawing.Point(390, 285);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(75, 40);
             this.exitButton.TabIndex = 18;
@@ -376,7 +393,7 @@
             this.fontToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F)));
             this.fontToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.fontToolStripMenuItem.Text = "&Font ...";
-            this.fontToolStripMenuItem.Click += new System.EventHandler(this.fontToolStripMenuItem_Click);
+            this.fontToolStripMenuItem.Click += new System.EventHandler(this._fontToolStripMenuItem_Click);
             // 
             // colorToolStripMenuItem
             // 
@@ -384,7 +401,7 @@
             this.colorToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.O)));
             this.colorToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.colorToolStripMenuItem.Text = "C&olor ...";
-            this.colorToolStripMenuItem.Click += new System.EventHandler(this.colorToolStripMenuItem_Click);
+            this.colorToolStripMenuItem.Click += new System.EventHandler(this._colorToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -409,30 +426,49 @@
             this.sharpAutoCenterFontDialog.MaxSize = 16;
             this.sharpAutoCenterFontDialog.MinSize = 10;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.08511F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.91489F));
+            this.tableLayoutPanel1.Controls.Add(this.basePriceLabel, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.basePriceTextBox, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.additionalOptionsLabel, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.additionalOptionsTextBox, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.subTotalLabel, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.subTotalTextBox, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.amountDueTextBox, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.salesTaxLabel, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.amountDueLabel, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.tradeInAllowanceTextBox, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.salesTaxTextBox, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.totalTextBox, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.tradeInAllowanceLabel, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.totalLabel, 0, 4);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(19, 40);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 7;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(235, 191);
+            this.tableLayoutPanel1.TabIndex = 20;
+            // 
             // SharpAutoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(490, 348);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.caculateButton);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.additionalItemsGroupBox);
-            this.Controls.Add(this.amountDueTextBox);
-            this.Controls.Add(this.tradeInAllowanceTextBox);
-            this.Controls.Add(this.totalTextBox);
-            this.Controls.Add(this.salesTaxTextBox);
-            this.Controls.Add(this.subTotalTextBox);
-            this.Controls.Add(this.additionalOptionsTextBox);
-            this.Controls.Add(this.basePriceTextBox);
-            this.Controls.Add(this.amountDueLabel);
-            this.Controls.Add(this.tradeInAllowanceLabel);
-            this.Controls.Add(this.totalLabel);
-            this.Controls.Add(this.salesTaxLabel);
-            this.Controls.Add(this.subTotalLabel);
-            this.Controls.Add(this.additionalOptionsLabel);
-            this.Controls.Add(this.basePriceLabel);
             this.Controls.Add(this.sharpAutoCenterMenuStrip);
             this.MainMenuStrip = this.sharpAutoCenterMenuStrip;
             this.MaximizeBox = false;
@@ -445,6 +481,8 @@
             this.groupBox2.PerformLayout();
             this.sharpAutoCenterMenuStrip.ResumeLayout(false);
             this.sharpAutoCenterMenuStrip.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -489,6 +527,7 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.FontDialog sharpAutoCenterFontDialog;
         private System.Windows.Forms.ColorDialog sharpAutoCenterColorDialog;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
 
