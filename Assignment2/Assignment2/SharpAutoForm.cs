@@ -219,11 +219,7 @@ namespace Assignment2
         private void _sharpAutoForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult result = MessageBox.Show("Are you sure?", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-            if (result == DialogResult.OK)
-            {
-                Application.Exit();
-            }
-            else
+            if (result == DialogResult.Cancel)
             {
                 e.Cancel = true;
             }

@@ -375,7 +375,7 @@
             // 
             this.calculateToolStripMenuItem.Name = "calculateToolStripMenuItem";
             this.calculateToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.C)));
-            this.calculateToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.calculateToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.calculateToolStripMenuItem.Text = "&Calculate";
             this.calculateToolStripMenuItem.Click += new System.EventHandler(this._caculateButton_Click);
             // 
@@ -383,15 +383,16 @@
             // 
             this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
             this.clearToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.L)));
-            this.clearToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.clearToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.clearToolStripMenuItem.Text = "C&lear";
             this.clearToolStripMenuItem.Click += new System.EventHandler(this._clearButton_Click);
             // 
             // fontToolStripMenuItem
             // 
             this.fontToolStripMenuItem.Name = "fontToolStripMenuItem";
-            this.fontToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F)));
-            this.fontToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.fontToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.F)));
+            this.fontToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.fontToolStripMenuItem.Text = "&Font ...";
             this.fontToolStripMenuItem.Click += new System.EventHandler(this._fontToolStripMenuItem_Click);
             // 
@@ -458,7 +459,7 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(235, 219);
             this.tableLayoutPanel1.TabIndex = 20;
             // 
-            // sharpAutoForm
+            // SharpAutoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -472,7 +473,9 @@
             this.Controls.Add(this.sharpAutoCenterMenuStrip);
             this.MainMenuStrip = this.sharpAutoCenterMenuStrip;
             this.MaximizeBox = false;
-            this.Name = "sharpAutoForm";
+            this.MaximumSize = new System.Drawing.Size(506, 386);
+            this.MinimumSize = new System.Drawing.Size(506, 386);
+            this.Name = "SharpAutoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Auto Center";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this._sharpAutoForm_FormClosing);
