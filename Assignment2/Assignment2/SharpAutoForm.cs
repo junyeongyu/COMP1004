@@ -33,7 +33,7 @@ namespace Assignment2
         
         // Constructor
 
-        public sharpAutoForm()
+        public SharpAutoForm()
         {
             InitializeComponent();
         }
