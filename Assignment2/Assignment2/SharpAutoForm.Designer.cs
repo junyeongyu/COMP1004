@@ -53,7 +53,7 @@
             this.caculateButton = new System.Windows.Forms.Button();
             this.clearButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.sharpAutoCenterMenuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,9 +63,11 @@
             this.colorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sharpAutoCenterFontDialog = new System.Windows.Forms.FontDialog();
+            this.sharpAutoCenterColorDialog = new System.Windows.Forms.ColorDialog();
             this.additionalItemsGroupBox.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            this.sharpAutoCenterMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // basePriceLabel
@@ -311,17 +313,17 @@
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this._exitButton_Click);
             // 
-            // menuStrip1
+            // sharpAutoCenterMenuStrip
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sharpAutoCenterMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.editToolStripMenuItem,
             this.helpToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(490, 24);
-            this.menuStrip1.TabIndex = 19;
-            this.menuStrip1.Text = "menuStrip1";
+            this.sharpAutoCenterMenuStrip.Location = new System.Drawing.Point(0, 0);
+            this.sharpAutoCenterMenuStrip.Name = "sharpAutoCenterMenuStrip";
+            this.sharpAutoCenterMenuStrip.Size = new System.Drawing.Size(490, 24);
+            this.sharpAutoCenterMenuStrip.TabIndex = 19;
+            this.sharpAutoCenterMenuStrip.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
@@ -336,7 +338,7 @@
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.X)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this._exitButton_Click);
             // 
@@ -374,6 +376,7 @@
             this.fontToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F)));
             this.fontToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.fontToolStripMenuItem.Text = "&Font ...";
+            this.fontToolStripMenuItem.Click += new System.EventHandler(this.fontToolStripMenuItem_Click);
             // 
             // colorToolStripMenuItem
             // 
@@ -381,6 +384,7 @@
             this.colorToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.O)));
             this.colorToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.colorToolStripMenuItem.Text = "C&olor ...";
+            this.colorToolStripMenuItem.Click += new System.EventHandler(this.colorToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -398,6 +402,12 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.aboutToolStripMenuItem.Text = "&About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this._aboutToolStripMenuItem_Click);
+            // 
+            // sharpAutoCenterFontDialog
+            // 
+            this.sharpAutoCenterFontDialog.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.sharpAutoCenterFontDialog.MaxSize = 16;
+            this.sharpAutoCenterFontDialog.MinSize = 10;
             // 
             // SharpAutoForm
             // 
@@ -423,8 +433,8 @@
             this.Controls.Add(this.subTotalLabel);
             this.Controls.Add(this.additionalOptionsLabel);
             this.Controls.Add(this.basePriceLabel);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.sharpAutoCenterMenuStrip);
+            this.MainMenuStrip = this.sharpAutoCenterMenuStrip;
             this.MaximizeBox = false;
             this.Name = "SharpAutoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -433,8 +443,8 @@
             this.additionalItemsGroupBox.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.sharpAutoCenterMenuStrip.ResumeLayout(false);
+            this.sharpAutoCenterMenuStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -467,7 +477,7 @@
         private System.Windows.Forms.Button caculateButton;
         private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.Button exitButton;
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip sharpAutoCenterMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
@@ -477,6 +487,8 @@
         private System.Windows.Forms.ToolStripMenuItem colorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.FontDialog sharpAutoCenterFontDialog;
+        private System.Windows.Forms.ColorDialog sharpAutoCenterColorDialog;
     }
 }
 

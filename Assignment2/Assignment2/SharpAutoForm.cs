@@ -121,7 +121,7 @@ namespace Assignment2
             string basePriceText = basePriceTextBox.Text.Trim();
             string tradeInAllowanceText = tradeInAllowanceTextBox.Text.Trim();
             
-            // Empty Check
+            //  Empty Check
             if (basePriceText == String.Empty)
             {
                 MessageBox.Show("Base Price should be inputed.");
@@ -133,7 +133,7 @@ namespace Assignment2
                 return;
             }
 
-            // Value Check
+            //  Value Check
             double basePrice;
             if (double.TryParse(basePriceText, out basePrice) == false)
             {
@@ -192,7 +192,30 @@ namespace Assignment2
             this.Close();
         }
 
+        private void fontToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult result = sharpAutoCenterFontDialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                Font font = sharpAutoCenterFontDialog.Font;
 
+                amountDueTextBox.Font = font;
+                basePriceTextBox.Font = font;
+            }
+        }
+
+        private void colorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult result = sharpAutoCenterColorDialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                Color color = sharpAutoCenterColorDialog.Color;
+                amountDueTextBox.BackColor = amountDueTextBox.BackColor; // for fixing a bug - http://stackoverflow.com/questions/20688408/how-do-you-change-the-text-color-of-a-readonly-textbox
+                amountDueTextBox.ForeColor = color;
+                basePriceTextBox.ForeColor = color;
+            }
+        }
+        
         //  General Functions
 
         private void _refreshAdditionalOptionsTextBox()
@@ -219,6 +242,5 @@ namespace Assignment2
             // Refresh Exterior Finish
             standardRadioButton.Checked = true; // default
         }
-
     }
 }
