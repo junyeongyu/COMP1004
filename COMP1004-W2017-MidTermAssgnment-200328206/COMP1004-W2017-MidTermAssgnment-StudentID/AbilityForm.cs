@@ -68,5 +68,11 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
             }
         }
 
+        private void NextButton_Click(object sender, EventArgs e)
+        {
+            RaceForm raceForm = new RaceForm();
+            raceForm.ShowDialog();
+            Hide();
+        }
     }
 }
