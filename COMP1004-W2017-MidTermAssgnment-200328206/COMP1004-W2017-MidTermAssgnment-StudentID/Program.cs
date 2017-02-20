@@ -37,8 +37,9 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
             raceForm.abilityForm = abilityForm; // previous
             raceForm.jobForm = jobForm; // next
 
-            // Inject previous & next forms into jobForm
-            jobForm.raceForm = raceForm; // previous
+            // Inject ability & next forms into jobForm
+            //jobForm.raceForm = raceForm; // previous
+            jobForm.abilityForm = abilityForm;
             jobForm.finalForm = finalForm; // next
 
             // Inject necessary objects into finalForm 
