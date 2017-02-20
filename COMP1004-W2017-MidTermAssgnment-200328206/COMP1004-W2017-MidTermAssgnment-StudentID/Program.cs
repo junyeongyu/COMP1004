@@ -1,4 +1,18 @@
-﻿using System;
+﻿/**
+ * The App name: Generation of RPG Character
+ * Author's name: Junyeong Yu (200328206)
+ * App Creation Date: February 20, 2017
+ * App Last Modification Date: February 20, 2017
+ * App Short Revision History
+ *  - 02:00 AM, Feb 20, 2017: Apply for Form Design except Menu, Follow name convention.
+ *  - 12:00 PM, Feb 20, 2017: Finish RaceForm and Use Dependancy Injection for every form.
+ *  - 01:00 PM, Feb 20, 2017: Change Component names properly
+ *  - 04:00 PM, Feb 20, 2017: Finish Final Form Except Font Changes
+ *  - 06:00 PM, Feb 20, 2017: Finish All UI and Functions (Work for Font Style)
+ *  - 06:30 PM, Feb 20, 2017: Add all necessary comments. (Finish Midterm Assignment)
+ * App description: After Users choose abilities, Race, Job, generatere pages of RPG characters
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;

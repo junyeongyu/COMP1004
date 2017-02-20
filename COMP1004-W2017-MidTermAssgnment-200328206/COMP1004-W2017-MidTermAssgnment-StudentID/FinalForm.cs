@@ -1,4 +1,11 @@
-﻿using System;
+﻿/**
+ * The class name: FinalForm
+ * Author's name: Junyeong Yu (200328206)
+ * Class Creation Date: February 20, 2017
+ * Class Last Modification Date: February 20, 2017
+ * Class description: (Last Step) The page to finalized character's all information
+ */
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +32,11 @@ namespace COMP1004_W2017_MidTermAssgnment_200328206
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Load all data from previous forms and set data to this form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FinalForm_Load(object sender, EventArgs e)
         {
             // One. Set Character Image
@@ -56,6 +68,11 @@ namespace COMP1004_W2017_MidTermAssgnment_200328206
             exitButton_Click(sender, e);
         }
 
+        /// <summary>
+        /// Print screen shot of this form data as a specific image file.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void printButton_Click(object sender, EventArgs e)
         {
             Bitmap img = new Bitmap(Width, Height);
@@ -70,6 +87,11 @@ namespace COMP1004_W2017_MidTermAssgnment_200328206
             printButton_Click(sender, e);
         }
 
+        /// <summary>
+        /// Retrive all labels and textboxes and set font styles based on user's choice.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void fontToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult result = FinalFormFontDialog.ShowDialog();
@@ -90,7 +112,7 @@ namespace COMP1004_W2017_MidTermAssgnment_200328206
                 {
                     foreach (Control control in tableLayoutPanel.Controls)
                     {
-                        if (control is Label || control is TextBox)
+                        if (control is Label || control is TextBox) // defensive programming
                         {
                             control.Font = font;
                         }
@@ -98,27 +120,12 @@ namespace COMP1004_W2017_MidTermAssgnment_200328206
                 }
             }
         }
-        private void retrieveControls(Control.ControlCollection controls)
-        {
-            Font font = FinalFormFontDialog.Font;
-            if (Controls != null)
-            {
-                foreach (Control control in Controls)
-                {
-                    System.Diagnostics.Debug.WriteLine(control);
-                    System.Diagnostics.Debug.WriteLine(control.HasChildren);
-                    if (control.HasChildren)
-                    {
-                        retrieveControls(control.Controls); // if there are children, need to retrive
-                    } 
-                    if (control is Label || control is TextBox)
-                    {
-                        control.Font = font;
-                    }
-                }
-            }
-        }
 
+        /// <summary>
+        /// Load about form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AboutForm aboutForm = new AboutForm();

@@ -1,4 +1,11 @@
-﻿using System;
+﻿/**
+ * The class name: RaceForm
+ * Author's name: Junyeong Yu (200328206)
+ * Class Creation Date: February 20, 2017
+ * Class Last Modification Date: February 20, 2017
+ * Class description: (Second Step) The page to decide character's race by choosing
+ */
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,6 +42,11 @@ namespace COMP1004_W2017_MidTermAssgnment_200328206
             abilityForm.addAbilityValue(abilityTextBox, value);
         }
        
+        /// <summary>
+        /// When human is selected, all abilities are added as much as 5 points
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void humanRadioButton_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -43,6 +55,11 @@ namespace COMP1004_W2017_MidTermAssgnment_200328206
             race = "Human";
         }
 
+        /// <summary>
+        /// When dwarf is selected, STR and PER are added as 20, and CHA is deducted as 10.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dwarfRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             CharacterPictureBox.Image = Properties.Resources.M_Dwarf1;
@@ -50,6 +67,11 @@ namespace COMP1004_W2017_MidTermAssgnment_200328206
             race = "Dwarf";
         }
 
+        /// <summary>
+        /// When elf is selected, DEX and CHA are added as much as 15.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void elfRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             CharacterPictureBox.Image = Properties.Resources.M_Elf1;
@@ -57,6 +79,11 @@ namespace COMP1004_W2017_MidTermAssgnment_200328206
             race = "Elf";
         }
 
+        /// <summary>
+        /// When halfling is selected, DEX and INT are added as much as 20, but STR is deducted as 10.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void halflingRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             CharacterPictureBox.Image = Properties.Resources.M_Halfling2;
