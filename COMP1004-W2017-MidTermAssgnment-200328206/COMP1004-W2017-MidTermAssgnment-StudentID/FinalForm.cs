@@ -70,11 +70,59 @@ namespace COMP1004_W2017_MidTermAssgnment_200328206
             printButton_Click(sender, e);
         }
 
+        private void fontToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult result = FinalFormFontDialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                System.Diagnostics.Debug.WriteLine(result);
+                // All label & testBox are using font that user chose.
+                Font font = FinalFormFontDialog.Font;
+
+                // Add TableLayoutPanel to retrieve label & textbox
+                List<Control> tableLayoutPanelList = new List<Control>();
+                tableLayoutPanelList.Add(characterInformationOneTableLayoutPanel);
+                tableLayoutPanelList.Add(characterInformationTwoTableLayoutPanel);
+                tableLayoutPanelList.Add(abilitiesTableLayoutPanel);
+
+                // Set font into labels and textboxes in tableLayoutPanels
+                foreach (Control tableLayoutPanel in tableLayoutPanelList)
+                {
+                    foreach (Control control in tableLayoutPanel.Controls)
+                    {
+                        if (control is Label || control is TextBox)
+                        {
+                            control.Font = font;
+                        }
+                    }
+                }
+            }
+        }
+        private void retrieveControls(Control.ControlCollection controls)
+        {
+            Font font = FinalFormFontDialog.Font;
+            if (Controls != null)
+            {
+                foreach (Control control in Controls)
+                {
+                    System.Diagnostics.Debug.WriteLine(control);
+                    System.Diagnostics.Debug.WriteLine(control.HasChildren);
+                    if (control.HasChildren)
+                    {
+                        retrieveControls(control.Controls); // if there are children, need to retrive
+                    } 
+                    if (control is Label || control is TextBox)
+                    {
+                        control.Font = font;
+                    }
+                }
+            }
+        }
+
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AboutForm aboutForm = new AboutForm();
             aboutForm.ShowDialog();
         }
-
     }
 }
