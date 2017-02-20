@@ -16,9 +16,25 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
         // Random Number object
         Random random = new Random();
 
+        private List<TextBox> _abilities;
+
         public AbilityForm()
         {
             InitializeComponent();
+
+            // Initialize
+            _abilities = new List<TextBox>();
+            _initializeAbilities();
+        }
+
+        private void _initializeAbilities()
+        {
+            _abilities.Add(STRTextBox);
+            _abilities.Add(DEXTextBox);
+            _abilities.Add(ENDTextBox);
+            _abilities.Add(INTTextBox);
+            _abilities.Add(PERTextBox);
+            _abilities.Add(CHATextBox);
         }
 
         /// <summary>
@@ -39,7 +55,17 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
 
         private void RollButton_Click(object sender, EventArgs e)
         {
-            Debug.WriteLine(Roll3D10().ToString());
+            // Iterate through the TextBox List (_abilities)
+            for (int i = 0; i < _abilities.Count; i++)
+            {
+                TextBox abilitiesTextBox = _abilities[i];
+
+                // role 3d10 and assign the value to a temp variable
+                int currentRole = Roll3D10();
+                
+                // assign the urrent roll to the current ability
+                abilitiesTextBox.Text = currentRole.ToString();
+            }
         }
 
     }
