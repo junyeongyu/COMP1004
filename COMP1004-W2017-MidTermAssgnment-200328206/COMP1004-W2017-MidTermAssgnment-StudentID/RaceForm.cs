@@ -12,9 +12,11 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
 {
     public partial class RaceForm : Form
     {
-        private AbilityForm _previousForm;
+        private AbilityForm _abilityForm; // previouse -- injected
+        private JobForm _jobForm; // next -- injected
 
-        public AbilityForm previousForm { get; set; }
+        public AbilityForm abilityForm { get; set; }
+        public JobForm jobForm { get; set; }
 
         public RaceForm()
         {
@@ -28,7 +30,7 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
         /// <param name="value"></param>
         private void _addAbilityValue(TextBox abilityTextBox, int value)
         {
-            previousForm.addAbilityValue(abilityTextBox, value);
+            abilityForm.addAbilityValue(abilityTextBox, value);
         }
        
         private void humanRadioButton_CheckedChanged(object sender, EventArgs e)
@@ -67,34 +69,33 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
             // there is possibility to lost data if value is lessor then 3 or more than 50.
             if (humanRadioButton.Checked)
             {
-                foreach (TextBox abilityTextBox in previousForm.getAbilities())
+                foreach (TextBox abilityTextBox in abilityForm.getAbilities())
                 {
                     _addAbilityValue(abilityTextBox, 5);
                 }
             } else if (dwarfRadioButton.Checked)
             {
-                _addAbilityValue(previousForm.STRTextBox, 20);
-                _addAbilityValue(previousForm.PERTextBox, 20);
-                _addAbilityValue(previousForm.CHATextBox, -10);
+                _addAbilityValue(abilityForm.STRTextBox, 20);
+                _addAbilityValue(abilityForm.PERTextBox, 20);
+                _addAbilityValue(abilityForm.CHATextBox, -10);
             } else if (elfRadioButton.Checked)
             {
-                _addAbilityValue(previousForm.DEXTextBox, 15);
-                _addAbilityValue(previousForm.CHATextBox, 15);
+                _addAbilityValue(abilityForm.DEXTextBox, 15);
+                _addAbilityValue(abilityForm.CHATextBox, 15);
             } else if (halflingRadioButton.Checked)
             {
-                _addAbilityValue(previousForm.DEXTextBox, 20);
-                _addAbilityValue(previousForm.INTTextBox, 20);
-                _addAbilityValue(previousForm.STRTextBox, -10);
+                _addAbilityValue(abilityForm.DEXTextBox, 20);
+                _addAbilityValue(abilityForm.INTTextBox, 20);
+                _addAbilityValue(abilityForm.STRTextBox, -10);
             } else
             {
                 MessageBox.Show("You need to choose race to preceed next step.");
                 return;
             }
 
-            JobForm jobForm = new JobForm();
-            jobForm.previouseForm = this;
-            jobForm.ShowDialog();
             Hide();
+            jobForm.ShowDialog();
+            Close();
         }
     }
 }

@@ -50,6 +50,7 @@
             this.CHATextBox.Location = new System.Drawing.Point(157, 322);
             this.CHATextBox.Margin = new System.Windows.Forms.Padding(4);
             this.CHATextBox.Name = "CHATextBox";
+            this.CHATextBox.ReadOnly = true;
             this.CHATextBox.Size = new System.Drawing.Size(132, 32);
             this.CHATextBox.TabIndex = 27;
             // 
@@ -59,6 +60,7 @@
             this.PERTextBox.Location = new System.Drawing.Point(157, 262);
             this.PERTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.PERTextBox.Name = "PERTextBox";
+            this.PERTextBox.ReadOnly = true;
             this.PERTextBox.Size = new System.Drawing.Size(132, 32);
             this.PERTextBox.TabIndex = 26;
             // 
@@ -68,6 +70,7 @@
             this.INTTextBox.Location = new System.Drawing.Point(157, 203);
             this.INTTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.INTTextBox.Name = "INTTextBox";
+            this.INTTextBox.ReadOnly = true;
             this.INTTextBox.Size = new System.Drawing.Size(132, 32);
             this.INTTextBox.TabIndex = 25;
             // 
@@ -77,6 +80,7 @@
             this.ENDTextBox.Location = new System.Drawing.Point(157, 148);
             this.ENDTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.ENDTextBox.Name = "ENDTextBox";
+            this.ENDTextBox.ReadOnly = true;
             this.ENDTextBox.Size = new System.Drawing.Size(132, 32);
             this.ENDTextBox.TabIndex = 24;
             // 
@@ -86,6 +90,7 @@
             this.DEXTextBox.Location = new System.Drawing.Point(157, 92);
             this.DEXTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.DEXTextBox.Name = "DEXTextBox";
+            this.DEXTextBox.ReadOnly = true;
             this.DEXTextBox.Size = new System.Drawing.Size(132, 32);
             this.DEXTextBox.TabIndex = 23;
             // 
@@ -95,6 +100,7 @@
             this.STRTextBox.Location = new System.Drawing.Point(157, 33);
             this.STRTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.STRTextBox.Name = "STRTextBox";
+            this.STRTextBox.ReadOnly = true;
             this.STRTextBox.Size = new System.Drawing.Size(132, 32);
             this.STRTextBox.TabIndex = 22;
             // 

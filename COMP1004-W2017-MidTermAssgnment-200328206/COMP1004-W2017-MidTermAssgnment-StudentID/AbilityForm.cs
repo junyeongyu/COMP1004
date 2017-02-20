@@ -16,8 +16,11 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
         // Random Number object
         Random random = new Random();
 
+        private RaceForm _raceForm; // next - injected
         private List<TextBox> _abilities;
-        
+
+        public RaceForm raceForm { get; set; }
+
         public AbilityForm()
         {
             InitializeComponent();
@@ -105,11 +108,10 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
                 MessageBox.Show("You need to roll dice to preceed next step.");
                 return;
             }
-            
-            RaceForm raceForm = new RaceForm();
-            raceForm.previousForm = this;
-            raceForm.ShowDialog();
+
             Hide();
+            raceForm.ShowDialog();
+            Close();
         }
     }
 }

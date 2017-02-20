@@ -12,13 +12,25 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
 {
     public partial class JobForm : Form
     {
-        private RaceForm _previousForm;
+        private RaceForm _raceForm; // previous -- injected
+        private FinalForm _finalForm; // next -- injected
 
-        public RaceForm previouseForm { get; set; }
+        public RaceForm raceForm { get; set; }
+        public FinalForm finalForm { get; set; }
 
         public JobForm()
         {
             InitializeComponent();
+        }
+
+        private void NextButton_Click(object sender, EventArgs e)
+        {
+
+
+            // Go to final form
+            Hide();
+            _finalForm.ShowDialog();
+            Close();
         }
     }
 }
