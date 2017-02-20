@@ -8,13 +8,73 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace COMP1004_W2017_MidTermAssgnment_StudentID
+namespace COMP1004_W2017_MidTermAssgnment_200328206
 {
     public partial class FinalForm : Form
     {
+        private AbilityForm _abilityForm; // injected
+        private RaceForm _raceForm; // injected
+        private JobForm _jobForm; // injected
+
+        public AbilityForm abilityForm { set; get; }
+        public RaceForm raceForm { set; get; }
+        public JobForm jobForm { set; get; }
+
         public FinalForm()
         {
             InitializeComponent();
         }
+
+        private void FinalForm_Load(object sender, EventArgs e)
+        {
+            // One. Set Character Image
+            CharacterPictureBox.Image = raceForm.CharacterPictureBox.Image;
+
+            // Two. Set Abilities
+            STRTextBox.Text = abilityForm.STRTextBox.Text;
+            DEXTextBox.Text = abilityForm.DEXTextBox.Text;
+            ENDTextBox.Text = abilityForm.ENDTextBox.Text;
+            INTTextBox.Text = abilityForm.INTTextBox.Text;
+            PERTextBox.Text = abilityForm.PERTextBox.Text;
+            CHATextBox.Text = abilityForm.CHATextBox.Text;
+
+            // Three. Set race
+            raceTextBox.Text = raceForm.race;
+
+            // Four. Set job & health points
+            jobTextBox.Text = jobForm.job;
+            healthPointsTextBox.Text = jobForm.healthPointsValueLabel.Text;
+        }
+        
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            exitButton_Click(sender, e);
+        }
+
+        private void printButton_Click(object sender, EventArgs e)
+        {
+            Bitmap img = new Bitmap(Width, Height);
+            DrawToBitmap(img, new Rectangle(0, 0, Width, Height));
+            img.Save("screenshot.png"); // location: bin/debug/screenshot.png
+            img.Dispose();
+            MessageBox.Show("You Printed current information (into file - screenshot.png)");
+        }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            printButton_Click(sender, e);
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutForm aboutForm = new AboutForm();
+            aboutForm.ShowDialog();
+        }
+
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace COMP1004_W2017_MidTermAssgnment_StudentID
+﻿namespace COMP1004_W2017_MidTermAssgnment_200328206
 {
     partial class JobForm
     {
@@ -164,6 +164,6 @@
         private System.Windows.Forms.RadioButton rogueRadioButton;
         private System.Windows.Forms.RadioButton soldierRadioButton;
         private System.Windows.Forms.Label healthPointsTextLabel;
-        private System.Windows.Forms.Label healthPointsValueLabel;
+        internal System.Windows.Forms.Label healthPointsValueLabel;
     }
 }

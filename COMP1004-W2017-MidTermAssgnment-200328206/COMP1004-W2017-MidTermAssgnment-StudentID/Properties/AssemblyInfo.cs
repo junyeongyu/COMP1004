@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("COMP1004_W2017_MidTermAssgnment_StudentID")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("COMP1004_W2017_MidTermAssgnment_200328206")]
+[assembly: AssemblyDescription("This application is making a character of RPG game.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("COMP1004_W2017_MidTermAssgnment_StudentID")]
+[assembly: AssemblyCompany("Junyeong Yu (200328206)")]
+[assembly: AssemblyProduct("COMP1004_W2017_MidTermAssgnment_200328206")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

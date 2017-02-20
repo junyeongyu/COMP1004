@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COMP1004-W2017-MidTermAssgnment-StudentID", "COMP1004-W2017-MidTermAssgnment-StudentID\COMP1004-W2017-MidTermAssgnment-StudentID.csproj", "{94D4567B-9F9C-4CC7-8F2D-0D3636D56F76}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COMP1004-W2017-MidTermAssgnment-200328206", "COMP1004-W2017-MidTermAssgnment-StudentID\COMP1004-W2017-MidTermAssgnment-200328206.csproj", "{94D4567B-9F9C-4CC7-8F2D-0D3636D56F76}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

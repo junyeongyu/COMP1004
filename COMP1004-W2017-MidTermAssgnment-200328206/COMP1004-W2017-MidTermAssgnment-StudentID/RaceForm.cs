@@ -8,15 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace COMP1004_W2017_MidTermAssgnment_StudentID
+namespace COMP1004_W2017_MidTermAssgnment_200328206
 {
     public partial class RaceForm : Form
     {
         private AbilityForm _abilityForm; // previouse -- injected
         private JobForm _jobForm; // next -- injected
+        private string _race;
 
         public AbilityForm abilityForm { get; set; }
         public JobForm jobForm { get; set; }
+        public string race { get; set; }
 
         public RaceForm()
         {
@@ -38,24 +40,28 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
 
             CharacterPictureBox.Image = Properties.Resources.M_Human1;
             RacialBonusTextBox.Text = "All Ability(+5)";
+            race = "Human";
         }
 
         private void dwarfRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             CharacterPictureBox.Image = Properties.Resources.M_Dwarf1;
             RacialBonusTextBox.Text = "STR(+20), PER(+20), CHA(-10)";
+            race = "Dwarf";
         }
 
         private void elfRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             CharacterPictureBox.Image = Properties.Resources.M_Elf1;
             RacialBonusTextBox.Text = "DEX(+15), CHA(+15)";
+            race = "Elf";
         }
 
         private void halflingRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             CharacterPictureBox.Image = Properties.Resources.M_Halfling2;
             RacialBonusTextBox.Text = "DEX(+20), INT(+20), STR(-10)";
+            race = "Halfling";
         }
 
         /// <summary>

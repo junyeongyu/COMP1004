@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace COMP1004_W2017_MidTermAssgnment_StudentID
+namespace COMP1004_W2017_MidTermAssgnment_200328206
 {
     static class Program
     {
@@ -43,6 +43,9 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
             jobForm.finalForm = finalForm; // next
 
             // Inject necessary objects into finalForm 
+            finalForm.abilityForm = abilityForm;
+            finalForm.raceForm = raceForm;
+            finalForm.jobForm = jobForm;
 
             return abilityForm;
         }

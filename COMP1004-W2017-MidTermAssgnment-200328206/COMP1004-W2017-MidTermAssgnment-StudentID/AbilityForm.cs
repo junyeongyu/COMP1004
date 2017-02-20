@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace COMP1004_W2017_MidTermAssgnment_StudentID
+namespace COMP1004_W2017_MidTermAssgnment_200328206
 {
     public partial class AbilityForm : Form
     {
