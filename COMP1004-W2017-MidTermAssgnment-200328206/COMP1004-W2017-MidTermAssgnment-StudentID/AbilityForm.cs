@@ -17,7 +17,7 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
         Random random = new Random();
 
         private List<TextBox> _abilities;
-
+        
         public AbilityForm()
         {
             InitializeComponent();
@@ -35,6 +35,36 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
             _abilities.Add(INTTextBox);
             _abilities.Add(PERTextBox);
             _abilities.Add(CHATextBox);
+        }
+
+        private int _limitNotExcceed(int value)
+        {
+            if (value <3)
+            {
+                value = 3;
+            } else if (value > 50)
+            {
+                value = 50;
+            }
+            return value;
+        }
+
+        public List<TextBox> getAbilities()
+        {
+            return _abilities;
+        }
+
+        public void setAbilityValue(TextBox textBox, int number)
+        {
+            number = _limitNotExcceed(number);
+            textBox.Text = number.ToString();
+        }
+
+        public void addAbilityValue(TextBox textBox, int number)
+        {
+            int previousValue = int.Parse(textBox.Text);
+            number += previousValue;
+            setAbilityValue(textBox, number);
         }
 
         /// <summary>
@@ -62,15 +92,22 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
 
                 // role 3d10 and assign the value to a temp variable
                 int currentRole = Roll3D10();
-                
+
                 // assign the urrent roll to the current ability
-                abilitiesTextBox.Text = currentRole.ToString();
+                setAbilityValue(abilitiesTextBox, currentRole);
             }
         }
 
         private void NextButton_Click(object sender, EventArgs e)
         {
+            if (STRTextBox.Text.Equals(String.Empty))
+            {
+                MessageBox.Show("You need to roll dice to preceed next step.");
+                return;
+            }
+            
             RaceForm raceForm = new RaceForm();
+            raceForm.previousForm = this;
             raceForm.ShowDialog();
             Hide();
         }

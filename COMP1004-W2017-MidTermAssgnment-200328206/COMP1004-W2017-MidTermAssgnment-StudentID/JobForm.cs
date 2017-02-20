@@ -12,6 +12,10 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
 {
     public partial class JobForm : Form
     {
+        private RaceForm _previousForm;
+
+        public RaceForm previouseForm { get; set; }
+
         public JobForm()
         {
             InitializeComponent();
