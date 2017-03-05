@@ -127,23 +127,26 @@
   <data name="The_Green_Hornet" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\The Green Hornet.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="The_Rite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\The Rite.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Cedar_Rapids" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cedar Rapids.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Footloose" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Footloose.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="The_Way_Back" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\The Way Back.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Death_Race_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Death Race 2.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="The_Mechanic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\The Mechanic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="The_Dilemma" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\The Dilemma.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Just_Go_With_It" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Just Go With It.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Company_Men" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Company Men.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="The_Eagle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\The Eagle.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="The_Roommate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\The Roommate.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,29 +160,26 @@
   <data name="Sanctum" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sanctum.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="The_Other_Woman" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\The Other Woman.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Waiting_for_Forever" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Waiting for Forever.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Just_Go_With_It" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Just Go With It.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="The_Dilemma" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\The Dilemma.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Real_Steel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Real Steel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Company_Men" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Company Men.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Death_Race_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Death Race 2.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Season_of_the_Witch" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Season of the Witch.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Waiting_for_Forever" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Waiting for Forever.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="The_Other_Woman" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\The Other Woman.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="The_Eagle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\The Eagle.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Footloose" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Footloose.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="The_Rite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\The Rite.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="No Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\No Image.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

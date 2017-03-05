@@ -35,11 +35,11 @@
             this.costLabel = new System.Windows.Forms.Label();
             this.categoryLabel = new System.Windows.Forms.Label();
             this.titleLabel = new System.Windows.Forms.Label();
+            this.yourSelectionPictureBox = new System.Windows.Forms.PictureBox();
             this.nextButton = new System.Windows.Forms.Button();
             this.chooseTheMovieLabel = new System.Windows.Forms.Label();
             this.currentMoviesListBox = new System.Windows.Forms.ListBox();
             this.currentMoviesLabel = new System.Windows.Forms.Label();
-            this.yourSelectionPictureBox = new System.Windows.Forms.PictureBox();
             this.yourSelectionGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.yourSelectionPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -111,6 +111,15 @@
             this.titleLabel.TabIndex = 1;
             this.titleLabel.Text = "Title";
             // 
+            // yourSelectionPictureBox
+            // 
+            this.yourSelectionPictureBox.Location = new System.Drawing.Point(15, 19);
+            this.yourSelectionPictureBox.Name = "yourSelectionPictureBox";
+            this.yourSelectionPictureBox.Size = new System.Drawing.Size(104, 124);
+            this.yourSelectionPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.yourSelectionPictureBox.TabIndex = 0;
+            this.yourSelectionPictureBox.TabStop = false;
+            // 
             // nextButton
             // 
             this.nextButton.Enabled = false;
@@ -150,21 +159,11 @@
             this.currentMoviesLabel.TabIndex = 4;
             this.currentMoviesLabel.Text = "Current Movies";
             // 
-            // yourSelectionPictureBox
-            // 
-            this.yourSelectionPictureBox.Image = global::Assignment3.Properties.Resources.No_Image;
-            this.yourSelectionPictureBox.Location = new System.Drawing.Point(15, 19);
-            this.yourSelectionPictureBox.Name = "yourSelectionPictureBox";
-            this.yourSelectionPictureBox.Size = new System.Drawing.Size(104, 124);
-            this.yourSelectionPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.yourSelectionPictureBox.TabIndex = 0;
-            this.yourSelectionPictureBox.TabStop = false;
-            // 
             // SelectionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(565, 317);
+            this.ClientSize = new System.Drawing.Size(561, 313);
             this.ControlBox = false;
             this.Controls.Add(this.currentMoviesLabel);
             this.Controls.Add(this.currentMoviesListBox);

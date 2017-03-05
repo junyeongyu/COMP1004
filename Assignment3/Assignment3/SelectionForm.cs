@@ -23,6 +23,7 @@ namespace Assignment3
         public string title { get { return _userSelection[0];} }
         public string category { get { return _userSelection[1];} }
         public double cost { get { return double.Parse(_userSelection[2]);} }
+        public Bitmap image { get { return _movieBitmapDictionary[title];} }
 
         public SelectionForm()
         {
@@ -95,6 +96,9 @@ namespace Assignment3
             {
                 currentMoviesListBox.Items.Add(key);
             }
+
+            // Set default image
+            yourSelectionPictureBox.Image = Properties.Resources.No_Image;
         }
 
         private void currentMoviesListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -118,6 +122,10 @@ namespace Assignment3
         private void nextButton_Click(object sender, EventArgs e)
         {
             Hide();
+            if (orderForm.isLoaded) // the reason why isLoaded is checked is load event occurs only one time
+            {
+                orderForm.refreshData();
+            }
             orderForm.Show();
         }
     }

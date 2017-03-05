@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.okButton = new System.Windows.Forms.Button();
             this.ThankYouLabel = new System.Windows.Forms.Label();
             this.creditCardLabel = new System.Windows.Forms.Label();
             this.movieNameLabel = new System.Windows.Forms.Label();
+            this.okButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,16 +52,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(396, 146);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // okButton
-            // 
-            this.okButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.okButton.Location = new System.Drawing.Point(169, 208);
-            this.okButton.Name = "okButton";
-            this.okButton.Size = new System.Drawing.Size(75, 36);
-            this.okButton.TabIndex = 1;
-            this.okButton.Text = "OK";
-            this.okButton.UseVisualStyleBackColor = true;
             // 
             // ThankYouLabel
             // 
@@ -96,6 +86,16 @@
             this.movieNameLabel.TabIndex = 2;
             this.movieNameLabel.Text = "[Your Movie] will begin streaming shortly";
             // 
+            // okButton
+            // 
+            this.okButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.okButton.Location = new System.Drawing.Point(169, 208);
+            this.okButton.Name = "okButton";
+            this.okButton.Size = new System.Drawing.Size(75, 36);
+            this.okButton.TabIndex = 1;
+            this.okButton.Text = "OK";
+            this.okButton.UseVisualStyleBackColor = true;
+            // 
             // StreamForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -104,6 +104,7 @@
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "StreamForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Your Movie is about to start!";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
