@@ -110,6 +110,69 @@
   <ItemGroup>
     <None Include="Resources\Bonanza_logo.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cedar Rapids.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Company Men.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Death Race 2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Footloose.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gnomeo and Juliet.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\I am Number Four.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Just Go With It.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\No Strings Attached.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Real Steel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sanctum.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Season of the Witch.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The Dilemma.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The Eagle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The Green Hornet.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The Mechanic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The Other Woman.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The Rite.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The Roommate.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The Way Back.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Waiting for Forever.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\No Image.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

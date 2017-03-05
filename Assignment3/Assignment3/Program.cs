@@ -16,7 +16,21 @@ namespace Assignment3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SplashForm());
+            Application.Run(getInitialForm());
+        }
+
+        static Form getInitialForm()
+        {
+            // Initialize Objects
+            SplashForm splashForm = new SplashForm();
+            SelectionForm selectionForm = new SelectionForm();
+            OrderForm orderForm = new OrderForm();
+
+            // Inject Objects
+            splashForm.selectionForm = selectionForm;
+            selectionForm.orderForm = orderForm;
+
+            return splashForm;
         }
     }
 }

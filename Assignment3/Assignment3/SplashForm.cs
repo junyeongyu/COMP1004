@@ -12,6 +12,10 @@ namespace Assignment3
 {
     public partial class SplashForm : Form
     {
+        private SelectionForm _selectionForm; // injected
+
+        public SelectionForm selectionForm { get; set; }
+
         public SplashForm()
         {
             InitializeComponent();
@@ -19,13 +23,10 @@ namespace Assignment3
 
         private void splashFormTimer_Tick(object sender, EventArgs e)
         {
-            this.splashFormTimer.Enabled = false;
-            this.Hide();
-
-            // One. Instantiate the next form
-            SelectionForm selectionForm = new SelectionForm();
+            splashFormTimer.Enabled = false;
+            Hide();
             
-            // Two. show next form
+            // show next form
             selectionForm.Show();
         }
     }
