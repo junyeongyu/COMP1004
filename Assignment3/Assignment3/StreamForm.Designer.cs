@@ -95,17 +95,23 @@
             this.okButton.TabIndex = 1;
             this.okButton.Text = "OK";
             this.okButton.UseVisualStyleBackColor = true;
+            this.okButton.Click += new System.EventHandler(this.okButton_Click);
             // 
             // StreamForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(420, 267);
+            this.ControlBox = false;
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "StreamForm";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Your Movie is about to start!";
+            this.Load += new System.EventHandler(this.StreamForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

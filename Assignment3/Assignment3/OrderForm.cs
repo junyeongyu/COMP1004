@@ -21,6 +21,8 @@ namespace Assignment3
         public SelectionForm selectionForm { get; set; }
         public StreamForm streamForm { get; set; }
         public bool isLoaded { get; set; }
+        public string grandTotal { get { return grandTotalTextBox.Text; } }
+        public string title { get { return titleTextBox.Text;} }
 
         public OrderForm()
         {

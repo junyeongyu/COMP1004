@@ -36,6 +36,9 @@ namespace Assignment3
             orderForm.selectionForm = selectionForm; // for using selected data
             orderForm.streamForm = streamForm; // for next step form
 
+            streamForm.splashForm = splashForm; // for closing form
+            streamForm.orderForm = orderForm; // previous form
+
             return splashForm;
         }
     }
