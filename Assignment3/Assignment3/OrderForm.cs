@@ -1,4 +1,12 @@
-﻿using System;
+﻿/**
+ * The class name: OrderForm
+ * Author's name: Junyeong Yu (200328206)
+ * Class Creation Date: Feburary 13, 2017
+ * Class Last Modification Date: March 5, 2017
+ * Class description: Calculate grand total price of movie based on cost, dvd and tax.
+ *                    Provide print & streaming functions
+ */
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,16 +32,27 @@ namespace Assignment3
         public string grandTotal { get { return grandTotalTextBox.Text; } }
         public string title { get { return titleTextBox.Text;} }
 
+        /// <summary>
+        /// Default constructor of order form
+        /// </summary>
         public OrderForm()
         {
             InitializeComponent();
         }
         
+        /// <summary>
+        /// Initial load event handler to refresh data
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OrderForm_Load(object sender, EventArgs e)
         {
             refreshData();
             isLoaded = true;
         }
+        /// <summary>
+        /// Refresh data based on previous form information
+        /// </summary>
         public void refreshData()
         {
             // set data using data from previous form
@@ -44,6 +63,9 @@ namespace Assignment3
             // calculate your order data
             calculateOrder();
         }
+        /// <summary>
+        /// Calculate grand total price based on cost, dvd & tax
+        /// </summary>
         private void calculateOrder()
         {
             // calcuate order
@@ -60,12 +82,22 @@ namespace Assignment3
             additionalChargeTextBox.Visible = additionalChargeCheckBox.Checked;
         }
 
+        /// <summary>
+        /// Close application when cancel button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cancelButton_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Thank you for using our service !!");
             splashForm.Close();
         }
 
+        /// <summary>
+        /// StreamForm is shown when stream button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void streamButton_Click(object sender, EventArgs e)
         {
             Hide();
@@ -86,17 +118,32 @@ namespace Assignment3
             MessageBox.Show("You Printed current information (into file - screenshot.png)");
         }
 
+        /// <summary>
+        /// Show developer information of this application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AboutForm aboutForm = new AboutForm();
             aboutForm.ShowDialog();
         }
 
+        /// <summary>
+        /// Whenever additional charge checkbox is checked, calculation takes place
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void additionalChargeCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             calculateOrder();
         }
 
+        /// <summary>
+        /// Move to previous form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void backButton_Click(object sender, EventArgs e)
         {
             Hide();

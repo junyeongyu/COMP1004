@@ -18,6 +18,9 @@ namespace Assignment3
 {
     partial class AboutForm : Form
     {
+        /// <summary>
+        /// Default constructor for about form
+        /// </summary>
         public AboutForm()
         {
             InitializeComponent();

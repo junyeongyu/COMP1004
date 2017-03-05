@@ -1,4 +1,11 @@
-﻿using System;
+﻿/**
+ * The class name: SelectionForm
+ * Author's name: Junyeong Yu (200328206)
+ * Class Creation Date: Feburary 13, 2017
+ * Class Last Modification Date: March 5, 2017
+ * Class description: Select movie from dropdown box for next step.
+ */
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,9 +21,9 @@ namespace Assignment3
     {
         private OrderForm _orderForm; // injected - next form
 
-        private Dictionary<string, string> _movieDictionary = new Dictionary<string, string>();
-        private Dictionary<string, Bitmap> _movieBitmapDictionary = new Dictionary<string, Bitmap>();
-        private Dictionary<string, double> _categoryDictinary = new Dictionary<string, double>();
+        private Dictionary<string, string> _movieDictionary = new Dictionary<string, string>(); // movie & category mapping
+        private Dictionary<string, Bitmap> _movieBitmapDictionary = new Dictionary<string, Bitmap>(); // movie & bitmap mapping
+        private Dictionary<string, double> _categoryDictinary = new Dictionary<string, double>(); // category & cost mapping
         private string[] _userSelection = new string[3];
 
         public OrderForm orderForm { get; set; }
@@ -25,14 +32,20 @@ namespace Assignment3
         public double cost { get { return double.Parse(_userSelection[2]);} }
         public Bitmap image { get { return _movieBitmapDictionary[title];} }
 
+        /// <summary>
+        /// Default constructor for initializing component & data
+        /// </summary>
         public SelectionForm()
         {
             InitializeComponent();
 
-            _initializeData();
+            _addInitialData();
         }
 
-        private void _initializeData()
+        /// <summary>
+        /// Add all necessary data
+        /// </summary>
+        private void _addInitialData()
         {
             // add movies with category
             _movieDictionary.Add("Season of the Witch", "Sci - Fi");
@@ -89,6 +102,11 @@ namespace Assignment3
             _categoryDictinary.Add("New Release", 4.99);
         }
 
+        /// <summary>
+        /// add all movies into proper component & set default image
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SelectionForm_Load(object sender, EventArgs e)
         {
             // Add all movies into ListBox
@@ -101,6 +119,11 @@ namespace Assignment3
             yourSelectionPictureBox.Image = Properties.Resources.No_Image;
         }
 
+        /// <summary>
+        /// Whenever movie is selected, values in textboxes are changed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void currentMoviesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             ListBox listBox = (ListBox) sender;
@@ -108,6 +131,7 @@ namespace Assignment3
             string category = _movieDictionary[movieName];
             string cost = _categoryDictinary[category].ToString();
 
+            // set data into UI components
             yourSelectionPictureBox.Image = _movieBitmapDictionary[movieName];
             titleTextBox.Text = movieName;
             categoryTextBox.Text = category;
@@ -119,6 +143,11 @@ namespace Assignment3
             _userSelection[2] = cost;
         }
 
+        /// <summary>
+        /// Move to order form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void nextButton_Click(object sender, EventArgs e)
         {
             Hide();

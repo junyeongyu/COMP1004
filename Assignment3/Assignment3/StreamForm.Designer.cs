@@ -106,7 +106,9 @@
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.tableLayoutPanel1);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(436, 305);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(436, 305);
             this.Name = "StreamForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
