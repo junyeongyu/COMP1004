@@ -32,16 +32,17 @@
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.splashFormTimer = new System.Windows.Forms.Timer(this.components);
             this.welcomePictureBox = new System.Windows.Forms.PictureBox();
+            this.fontDialog1 = new System.Windows.Forms.FontDialog();
             ((System.ComponentModel.ISupportInitialize)(this.welcomePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // welcomeLabel
             // 
             this.welcomeLabel.AutoSize = true;
-            this.welcomeLabel.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.welcomeLabel.BackColor = System.Drawing.SystemColors.InfoText;
             this.welcomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.welcomeLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.welcomeLabel.Location = new System.Drawing.Point(138, 65);
+            this.welcomeLabel.Location = new System.Drawing.Point(137, 29);
             this.welcomeLabel.Name = "welcomeLabel";
             this.welcomeLabel.Size = new System.Drawing.Size(307, 42);
             this.welcomeLabel.TabIndex = 0;
@@ -55,9 +56,11 @@
             // 
             // welcomePictureBox
             // 
-            this.welcomePictureBox.Location = new System.Drawing.Point(145, 141);
+            this.welcomePictureBox.Image = global::Assignment4.Properties.Resources.dollor_computers_logo;
+            this.welcomePictureBox.Location = new System.Drawing.Point(12, 99);
             this.welcomePictureBox.Name = "welcomePictureBox";
-            this.welcomePictureBox.Size = new System.Drawing.Size(270, 169);
+            this.welcomePictureBox.Size = new System.Drawing.Size(557, 355);
+            this.welcomePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.welcomePictureBox.TabIndex = 1;
             this.welcomePictureBox.TabStop = false;
             // 
@@ -66,7 +69,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlText;
-            this.ClientSize = new System.Drawing.Size(535, 350);
+            this.ClientSize = new System.Drawing.Size(581, 466);
             this.Controls.Add(this.welcomePictureBox);
             this.Controls.Add(this.welcomeLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -84,5 +87,6 @@
         private System.Windows.Forms.Label welcomeLabel;
         private System.Windows.Forms.Timer splashFormTimer;
         private System.Windows.Forms.PictureBox welcomePictureBox;
+        private System.Windows.Forms.FontDialog fontDialog1;
     }
 }

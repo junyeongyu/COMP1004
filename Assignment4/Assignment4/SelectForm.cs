@@ -16,5 +16,12 @@ namespace Assignment4
         {
             InitializeComponent();
         }
+
+        private void SelectForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the '_comp_1004DataSet.products' table. You can move, or remove it, as needed.
+            this.productsTableAdapter.Fill(this._comp_1004DataSet.products);
+
+        }
     }
 }

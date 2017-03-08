@@ -12,9 +12,31 @@ namespace Assignment4
 {
     public partial class StartForm : Form
     {
+        private SelectForm _selectForm; // injected - next form
+        private SplashScreen _splashScreen; // injected - to close form
+
+        public SelectForm selectForm { get; set; }
+        public SplashScreen splashScreen { get; set; }
+
         public StartForm()
         {
             InitializeComponent();
+        }
+
+        private void startNewOrderButton_Click(object sender, EventArgs e)
+        {
+            Hide();
+            selectForm.Show();
+        }
+
+        private void openSavedOrderButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            splashScreen.Close();
         }
     }
 }
