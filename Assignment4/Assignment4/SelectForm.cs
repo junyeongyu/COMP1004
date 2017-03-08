@@ -12,6 +12,12 @@ namespace Assignment4
 {
     public partial class SelectForm : Form
     {
+        private SplashScreen _splashScreen; // injected - to close form
+        private ProductInfoForm _productInfoForm; //injected - for next step
+
+        public SplashScreen splashScreen { get; set; }
+        public ProductInfoForm productInfoForm { get; set; }
+
         public SelectForm()
         {
             InitializeComponent();
@@ -22,6 +28,17 @@ namespace Assignment4
             // TODO: This line of code loads data into the '_comp_1004DataSet.products' table. You can move, or remove it, as needed.
             this.productsTableAdapter.Fill(this._comp_1004DataSet.products);
 
+        }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            splashScreen.Close();
+        }
+
+        private void nextButton_Click(object sender, EventArgs e)
+        {
+            Hide();
+            productInfoForm.Show();
         }
     }
 }

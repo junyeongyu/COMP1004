@@ -44,12 +44,16 @@ namespace Assignment4
             SplashScreen splashScreen = new SplashScreen();
             StartForm startForm = new StartForm();
             SelectForm selectForm = new SelectForm();
+            ProductInfoForm productInfoForm = new ProductInfoForm();
 
             // Inject Objects
             splashScreen.startForm = startForm;
 
             startForm.selectForm = selectForm; // for next step
             startForm.splashScreen = splashScreen; // for closing form
+
+            selectForm.splashScreen = splashScreen; // for closing form
+            selectForm.productInfoForm = productInfoForm; // for next step
 
             return splashScreen;
         }
