@@ -634,11 +634,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(619, 333);
+            this.ControlBox = false;
             this.Controls.Add(this.parentTableLayoutPanel);
             this.Controls.Add(this.selectFormMenuStrip);
             this.MainMenuStrip = this.selectFormMenuStrip;
             this.Name = "ProductInfoForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product Information Form";
+            this.Load += new System.EventHandler(this.ProductInfoForm_Load);
             this.selectFormMenuStrip.ResumeLayout(false);
             this.selectFormMenuStrip.PerformLayout();
             this.parentTableLayoutPanel.ResumeLayout(false);

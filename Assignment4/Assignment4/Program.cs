@@ -1,18 +1,20 @@
-﻿/**
- * The App name: Dollor Computers
- * Author's name: Junyeong Yu (200328206)
- * App Creation Date: March 7, 2017
- * App Last Modification Date: March 7, 2017
- * App Short Revision History
- *  - 07:40 PM  Mar 07, 2017: Apply for Form Design and follow name convention.
- *  - 00:00 AM, Mar 07, 2017: 
- *  - 00:00 AM, Mar 07, 2017: 
- *  - 00:00 PM, Mar 07, 2017: 
- *  - 00:00 PM, Mar 07, 2017: 
- *  - 00:00 PM, Mar 07, 2017: 
- * App description: Create a multi-form project that simulates a computer purchase. 
- *                  Give the user an option to “start a new order” or “load a saved order”
- */
+﻿
+using Assignment4.Models;
+/**
+* The App name: Dollor Computers
+* Author's name: Junyeong Yu (200328206)
+* App Creation Date: March 7, 2017
+* App Last Modification Date: March 7, 2017
+* App Short Revision History
+*  - 07:40 PM  Mar 07, 2017: Apply for Form Design and follow name convention.
+*  - 09:00 PM, Mar 07, 2017: Implement minor functions of StartForm and SelectForm.
+*  - 00:00 AM, Mar 07, 2017: 
+*  - 00:00 PM, Mar 07, 2017: 
+*  - 00:00 PM, Mar 07, 2017: 
+*  - 00:00 PM, Mar 07, 2017: 
+* App description: Create a multi-form project that simulates a computer purchase. 
+*                  Give the user an option to “start a new order” or “load a saved order”
+*/
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,6 +46,7 @@ namespace Assignment4
             SplashScreen splashScreen = new SplashScreen();
             StartForm startForm = new StartForm();
             SelectForm selectForm = new SelectForm();
+            ProductContext productContext = new ProductContext();
             ProductInfoForm productInfoForm = new ProductInfoForm();
 
             // Inject Objects
@@ -54,6 +57,7 @@ namespace Assignment4
 
             selectForm.splashScreen = splashScreen; // for closing form
             selectForm.productInfoForm = productInfoForm; // for next step
+            selectForm.productContext = productContext; // for loading data from db
 
             return splashScreen;
         }

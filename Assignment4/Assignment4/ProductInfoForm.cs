@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assignment4.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,16 @@ namespace Assignment4
 {
     public partial class ProductInfoForm : Form
     {
+        private ProductContext productContext = new ProductContext();
+
         public ProductInfoForm()
         {
             InitializeComponent();
+        }
+
+        private void ProductInfoForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
