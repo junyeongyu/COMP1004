@@ -8,8 +8,8 @@ using Assignment4.Models;
 * App Short Revision History
 *  - 07:40 PM  Mar 07, 2017: Apply for Form Design and follow name convention.
 *  - 09:00 PM, Mar 07, 2017: Implement minor functions of StartForm and SelectForm.
-*  - 00:00 AM, Mar 07, 2017: 
-*  - 00:00 PM, Mar 07, 2017: 
+*  - 00:40 AM, Mar 14, 2017: Finish All functions of SelectForm.
+*  - 00:40 AM, Mar 15, 2017: Finish All functions of ProductInfoForm except of file process. AboutForm in OrderForm is made.
 *  - 00:00 PM, Mar 07, 2017: 
 *  - 00:00 PM, Mar 07, 2017: 
 * App description: Create a multi-form project that simulates a computer purchase. 
@@ -48,16 +48,21 @@ namespace Assignment4
             SelectForm selectForm = new SelectForm();
             ProductContext productContext = new ProductContext();
             ProductInfoForm productInfoForm = new ProductInfoForm();
+            OrderForm orderForm = new OrderForm();
 
             // Inject Objects
-            splashScreen.startForm = startForm;
+            splashScreen.startForm = startForm; // to move to start form after 3 seconds
 
-            startForm.selectForm = selectForm; // for next step
             startForm.splashScreen = splashScreen; // for closing form
+            startForm.selectForm = selectForm; // for next step
 
             selectForm.splashScreen = splashScreen; // for closing form
             selectForm.productInfoForm = productInfoForm; // for next step
             selectForm.productContext = productContext; // for loading data from db
+
+            productInfoForm.splashScreen = splashScreen; // for closing form
+            productInfoForm.selectForm = selectForm; // to move to select form
+            productInfoForm.orderForm = orderForm; // to move to order form
 
             return splashScreen;
         }

@@ -130,6 +130,7 @@
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.X)));
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -146,6 +147,7 @@
             this.selectAnotherProductToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.L)));
             this.selectAnotherProductToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.selectAnotherProductToolStripMenuItem.Text = "Se&lect Another Product";
+            this.selectAnotherProductToolStripMenuItem.Click += new System.EventHandler(this.selectAnotherProductButton_Click);
             // 
             // parentTableLayoutPanel
             // 
@@ -193,6 +195,7 @@
             this.costTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.costTextBox.Location = new System.Drawing.Point(483, 3);
             this.costTextBox.Name = "costTextBox";
+            this.costTextBox.ReadOnly = true;
             this.costTextBox.Size = new System.Drawing.Size(90, 20);
             this.costTextBox.TabIndex = 7;
             // 
@@ -201,6 +204,7 @@
             this.conditionTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.conditionTextBox.Location = new System.Drawing.Point(291, 3);
             this.conditionTextBox.Name = "conditionTextBox";
+            this.conditionTextBox.ReadOnly = true;
             this.conditionTextBox.Size = new System.Drawing.Size(90, 20);
             this.conditionTextBox.TabIndex = 6;
             // 
@@ -242,6 +246,7 @@
             this.productIdTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.productIdTextBox.Location = new System.Drawing.Point(99, 3);
             this.productIdTextBox.Name = "productIdTextBox";
+            this.productIdTextBox.ReadOnly = true;
             this.productIdTextBox.Size = new System.Drawing.Size(90, 20);
             this.productIdTextBox.TabIndex = 5;
             // 
@@ -284,6 +289,7 @@
             this.modelTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.modelTextBox.Location = new System.Drawing.Point(291, 36);
             this.modelTextBox.Name = "modelTextBox";
+            this.modelTextBox.ReadOnly = true;
             this.modelTextBox.Size = new System.Drawing.Size(281, 20);
             this.modelTextBox.TabIndex = 10;
             // 
@@ -292,6 +298,7 @@
             this.manufacturerTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.manufacturerTextBox.Location = new System.Drawing.Point(99, 36);
             this.manufacturerTextBox.Name = "manufacturerTextBox";
+            this.manufacturerTextBox.ReadOnly = true;
             this.manufacturerTextBox.Size = new System.Drawing.Size(90, 20);
             this.manufacturerTextBox.TabIndex = 9;
             // 
@@ -300,6 +307,7 @@
             this.osTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.osTextBox.Location = new System.Drawing.Point(291, 5);
             this.osTextBox.Name = "osTextBox";
+            this.osTextBox.ReadOnly = true;
             this.osTextBox.Size = new System.Drawing.Size(281, 20);
             this.osTextBox.TabIndex = 8;
             // 
@@ -308,6 +316,7 @@
             this.platformTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.platformTextBox.Location = new System.Drawing.Point(99, 5);
             this.platformTextBox.Name = "platformTextBox";
+            this.platformTextBox.ReadOnly = true;
             this.platformTextBox.Size = new System.Drawing.Size(90, 20);
             this.platformTextBox.TabIndex = 7;
             // 
@@ -406,6 +415,7 @@
             this.webCamTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.webCamTextBox.Location = new System.Drawing.Point(478, 68);
             this.webCamTextBox.Name = "webCamTextBox";
+            this.webCamTextBox.ReadOnly = true;
             this.webCamTextBox.Size = new System.Drawing.Size(90, 20);
             this.webCamTextBox.TabIndex = 24;
             // 
@@ -414,6 +424,7 @@
             this.cpuSpeedTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cpuSpeedTextBox.Location = new System.Drawing.Point(288, 68);
             this.cpuSpeedTextBox.Name = "cpuSpeedTextBox";
+            this.cpuSpeedTextBox.ReadOnly = true;
             this.cpuSpeedTextBox.Size = new System.Drawing.Size(89, 20);
             this.cpuSpeedTextBox.TabIndex = 23;
             // 
@@ -422,6 +433,7 @@
             this.cpuTypeTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cpuTypeTextBox.Location = new System.Drawing.Point(98, 68);
             this.cpuTypeTextBox.Name = "cpuTypeTextBox";
+            this.cpuTypeTextBox.ReadOnly = true;
             this.cpuTypeTextBox.Size = new System.Drawing.Size(89, 20);
             this.cpuTypeTextBox.TabIndex = 22;
             // 
@@ -430,6 +442,7 @@
             this.gpuTypeTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.gpuTypeTextBox.Location = new System.Drawing.Point(478, 36);
             this.gpuTypeTextBox.Name = "gpuTypeTextBox";
+            this.gpuTypeTextBox.ReadOnly = true;
             this.gpuTypeTextBox.Size = new System.Drawing.Size(90, 20);
             this.gpuTypeTextBox.TabIndex = 21;
             // 
@@ -438,6 +451,7 @@
             this.cpuNumberTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cpuNumberTextBox.Location = new System.Drawing.Point(288, 36);
             this.cpuNumberTextBox.Name = "cpuNumberTextBox";
+            this.cpuNumberTextBox.ReadOnly = true;
             this.cpuNumberTextBox.Size = new System.Drawing.Size(89, 20);
             this.cpuNumberTextBox.TabIndex = 20;
             // 
@@ -446,6 +460,7 @@
             this.cpuBrandTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cpuBrandTextBox.Location = new System.Drawing.Point(98, 36);
             this.cpuBrandTextBox.Name = "cpuBrandTextBox";
+            this.cpuBrandTextBox.ReadOnly = true;
             this.cpuBrandTextBox.Size = new System.Drawing.Size(89, 20);
             this.cpuBrandTextBox.TabIndex = 19;
             // 
@@ -454,6 +469,7 @@
             this.hddTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.hddTextBox.Location = new System.Drawing.Point(478, 5);
             this.hddTextBox.Name = "hddTextBox";
+            this.hddTextBox.ReadOnly = true;
             this.hddTextBox.Size = new System.Drawing.Size(90, 20);
             this.hddTextBox.TabIndex = 18;
             // 
@@ -462,6 +478,7 @@
             this.lcdSizeTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lcdSizeTextBox.Location = new System.Drawing.Point(288, 5);
             this.lcdSizeTextBox.Name = "lcdSizeTextBox";
+            this.lcdSizeTextBox.ReadOnly = true;
             this.lcdSizeTextBox.Size = new System.Drawing.Size(89, 20);
             this.lcdSizeTextBox.TabIndex = 17;
             // 
@@ -470,6 +487,7 @@
             this.memoryTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.memoryTextBox.Location = new System.Drawing.Point(98, 5);
             this.memoryTextBox.Name = "memoryTextBox";
+            this.memoryTextBox.ReadOnly = true;
             this.memoryTextBox.Size = new System.Drawing.Size(89, 20);
             this.memoryTextBox.TabIndex = 16;
             // 
@@ -593,12 +611,14 @@
             // 
             // nextButton
             // 
+            this.nextButton.Enabled = false;
             this.nextButton.Location = new System.Drawing.Point(507, 3);
             this.nextButton.Name = "nextButton";
             this.nextButton.Size = new System.Drawing.Size(67, 20);
             this.nextButton.TabIndex = 19;
             this.nextButton.Text = "Next";
             this.nextButton.UseVisualStyleBackColor = true;
+            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
             // 
             // cancelButton
             // 
@@ -608,6 +628,7 @@
             this.cancelButton.TabIndex = 18;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // clickNextToConfirmLabel
             // 
@@ -628,6 +649,7 @@
             this.selectAnotherProductButton.TabIndex = 17;
             this.selectAnotherProductButton.Text = "Select Another Product";
             this.selectAnotherProductButton.UseVisualStyleBackColor = true;
+            this.selectAnotherProductButton.Click += new System.EventHandler(this.selectAnotherProductButton_Click);
             // 
             // ProductInfoForm
             // 

@@ -12,12 +12,12 @@ namespace Assignment4
 {
     public partial class StartForm : Form
     {
-        private SelectForm _selectForm; // injected - next form
         private SplashScreen _splashScreen; // injected - to close form
-
-        public SelectForm selectForm { get; set; }
+        private SelectForm _selectForm; // injected - next form
+        
         public SplashScreen splashScreen { get; set; }
-
+        public SelectForm selectForm { get; set; }
+        
         public StartForm()
         {
             InitializeComponent();

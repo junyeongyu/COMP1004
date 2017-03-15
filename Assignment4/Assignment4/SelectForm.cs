@@ -16,11 +16,14 @@ namespace Assignment4
         private SplashScreen _splashScreen; // injected - to close form
         private ProductInfoForm _productInfoForm; //injected - for next step
         private ProductContext _productContext; // injected - for loading data
-        private Product _currentProduct;
+        private Product _product;
+        private Boolean _isLoaded = false;
 
         public SplashScreen splashScreen { get; set; }
         public ProductInfoForm productInfoForm { get; set; }
         public ProductContext productContext { get; set; }
+        public Product product { get; set; }
+        public Boolean isLoaded { get; set; }
 
         public SelectForm()
         {
@@ -30,14 +33,45 @@ namespace Assignment4
         private void SelectForm_Load(object sender, EventArgs e)
         {
             //this.productsTableAdapter.Fill(this._comp_1004DataSet.products);
+            refreshData();
+            isLoaded = true;
+        }
+        public void refreshData()
+        {
             try
             {
                 this.dollorComputerDataGridView.DataSource = (from product in productContext.products select product).ToList();
+                if (product != null) // when from ProductInfoForm
+                {
+                    selectRow(product.productID);
+                }
             }
             catch (Exception exception)
             {
                 MessageBox.Show(exception.Message);
             }
+        }
+        private void selectRow(short productID)
+        {
+            // change color for selected row
+            foreach (DataGridViewRow rowTemp in dollorComputerDataGridView.Rows)
+            {
+                if (productID != short.Parse(rowTemp.Cells[0].Value.ToString()))
+                {
+                    rowTemp.DefaultCellStyle.BackColor = Color.White;
+                }
+                else
+                {
+                    rowTemp.DefaultCellStyle.BackColor = Color.Yellow;
+                }
+            }
+
+            product = (from product in productContext.products where product.productID == productID select product).SingleOrDefault();
+            nextButton.Enabled = true;
+
+            // displays the manufacturer field, the model field and the cost field
+            yourSelectionTextBox.Text = product.manufacturer + " " + product.model + " Priced at: $" + product.cost;
+
         }
 
         private void cancelButton_Click(object sender, EventArgs e)
@@ -48,31 +82,19 @@ namespace Assignment4
         private void nextButton_Click(object sender, EventArgs e)
         {
             Hide();
+            productInfoForm.product = product;
+            if (productInfoForm.isLoaded) // because loading form is one time.
+            {
+                productInfoForm.refreshData();
+            }
             productInfoForm.Show();
         }
 
         private void dollorComputerDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridView dataGridView = sender as DataGridView;
-            DataGridViewRow row = dataGridView.CurrentRow;
-
-            // change color for selected row
-            row.DefaultCellStyle.BackColor = Color.Yellow; // for ui performance
-            foreach (DataGridViewRow rowTemp in dataGridView.Rows)
-            {
-                if (row.Cells[0].Value.ToString() != rowTemp.Cells[0].Value.ToString())
-                {
-                    rowTemp.DefaultCellStyle.BackColor = Color.White;
-                }
-            }
-
+            DataGridViewRow row = dollorComputerDataGridView.CurrentRow;
             short productID = short.Parse(row.Cells[0].Value.ToString());
-            Product productOne = (from product in productContext.products where product.productID == productID select product).SingleOrDefault();
-            _currentProduct = productOne;
-            nextButton.Enabled = true;
-
-            // displays the manufacturer field, the model field and the cost field
-            yourSelectionTextBox.Text = productOne.manufacturer + " " + productOne.model + " Priced at: $" + productOne.cost;
+            selectRow(productID);
         }
     }
 }
