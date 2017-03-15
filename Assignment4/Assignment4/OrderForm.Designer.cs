@@ -60,7 +60,6 @@
             this.cpuBrandLabel = new System.Windows.Forms.Label();
             this.memoryLabel = new System.Windows.Forms.Label();
             this.lcdSizeLabel = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.yourPriceGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lineLabel = new System.Windows.Forms.Label();
@@ -73,15 +72,16 @@
             this.cancelButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
             this.finishButton = new System.Windows.Forms.Button();
+            this.productPictureBox = new System.Windows.Forms.PictureBox();
             this.orderFormMenuStrip.SuspendLayout();
             this.systemComponentsUpGroupBox.SuspendLayout();
             this.systemComponentsUpTableLayoutPanel.SuspendLayout();
             this.systemComponentsDownGroupBox.SuspendLayout();
             this.systemComponentsDownTableLayoutPanel.SuspendLayout();
             this.systemComponentsDownLeftTableLayoutPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.yourPriceGroupBox.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // orderFormMenuStrip
@@ -149,7 +149,7 @@
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.A)));
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.aboutToolStripMenuItem.Text = "&About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -445,14 +445,6 @@
             this.lcdSizeLabel.TabIndex = 19;
             this.lcdSizeLabel.Text = "LCD Size";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(411, 36);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(145, 150);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
             // yourPriceGroupBox
             // 
             this.yourPriceGroupBox.Controls.Add(this.tableLayoutPanel1);
@@ -583,6 +575,15 @@
             this.finishButton.Text = "Finish";
             this.finishButton.UseVisualStyleBackColor = true;
             // 
+            // productPictureBox
+            // 
+            this.productPictureBox.Location = new System.Drawing.Point(411, 36);
+            this.productPictureBox.Name = "productPictureBox";
+            this.productPictureBox.Size = new System.Drawing.Size(145, 150);
+            this.productPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.productPictureBox.TabIndex = 3;
+            this.productPictureBox.TabStop = false;
+            // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -593,7 +594,7 @@
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.yourPriceGroupBox);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.productPictureBox);
             this.Controls.Add(this.systemComponentsUpGroupBox);
             this.Controls.Add(this.systemComponentsDownGroupBox);
             this.Controls.Add(this.orderFormMenuStrip);
@@ -601,6 +602,7 @@
             this.Name = "OrderForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Complete Your Order";
+            this.Load += new System.EventHandler(this.OrderForm_Load);
             this.orderFormMenuStrip.ResumeLayout(false);
             this.orderFormMenuStrip.PerformLayout();
             this.systemComponentsUpGroupBox.ResumeLayout(false);
@@ -611,10 +613,10 @@
             this.systemComponentsDownTableLayoutPanel.PerformLayout();
             this.systemComponentsDownLeftTableLayoutPanel.ResumeLayout(false);
             this.systemComponentsDownLeftTableLayoutPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.yourPriceGroupBox.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -654,7 +656,7 @@
         private System.Windows.Forms.TextBox modelTextBox;
         private System.Windows.Forms.Label modelLabel;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox productPictureBox;
         private System.Windows.Forms.GroupBox yourPriceGroupBox;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Button backButton;

@@ -10,6 +10,9 @@ using Assignment4.Models;
 *  - 09:00 PM, Mar 07, 2017: Implement minor functions of StartForm and SelectForm.
 *  - 00:40 AM, Mar 14, 2017: Finish All functions of SelectForm.
 *  - 00:40 AM, Mar 15, 2017: Finish All functions of ProductInfoForm except of file process. AboutForm in OrderForm is made.
+*  - 02:20 AM, Mar 15, 2017: Add all necessary images & update picture box in OrderForm
+*  - 00:00 PM, Mar 07, 2017: 
+*  - 00:00 PM, Mar 07, 2017: 
 *  - 00:00 PM, Mar 07, 2017: 
 *  - 00:00 PM, Mar 07, 2017: 
 * App description: Create a multi-form project that simulates a computer purchase. 
@@ -63,6 +66,9 @@ namespace Assignment4
             productInfoForm.splashScreen = splashScreen; // for closing form
             productInfoForm.selectForm = selectForm; // to move to select form
             productInfoForm.orderForm = orderForm; // to move to order form
+
+            orderForm.splashScreen = splashScreen; // for closing form
+            orderForm.productInfoForm = productInfoForm; // to get product information
 
             return splashScreen;
         }

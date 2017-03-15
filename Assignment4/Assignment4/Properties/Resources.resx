@@ -118,10 +118,76 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="dollor-computers-logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dollor-computers-logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="coin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\coin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\resources\coin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dollor_computers_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\dollor-computers-logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_10_HP_630" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\10-hp-630.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_11_Acer_AS5552_7686" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\11-acer-as5552-7686.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_12_Toshiba_P750_00Y" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\12-toshiba-p750-00y.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_13_HP_HPE_h8_1010" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\13-hp-hpe h8-1010.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_14_iBUYPOWER_968SLCK" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\14-ibuypower-968slck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_15_CybertronPC_TGM2111E" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\15-cybertronpc-tgm2111e.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_16_iBUYPOWER_964SLCK" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\16-ibuypower-964slck.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_17_CybertronPC_TGM2141L" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\17-cybertronpc-tgm2141l.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_18_CybertronPC_TGM2171C" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\18-cybertronpc-tgm2171c.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_19_Gateway_FX6860_EF30P" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\19-gateway-fx6860-ef30p.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_1_Asus_G71GX_RX05" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\1-asus-g71gx-rx05.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_20_HP_P7_1047" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\20-hp-p7-1047.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_21_Apple_iMac" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\21-apple-imac.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_22_Apple_Mac_Pro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\22-apple-mac pro.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_2_Asus_X73SV_XR1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\2-asus-x73sv-xr1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_3_Lenovo_G770" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\3-lenovo-g770.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_4_Acer_AS7750G_9621" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\4-acer-as7750g-9621.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_5_Asus_G74Sx_RH71" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\5-asus-g74sx-rh71.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_6_Asus_G74Sx_RH71" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\6-asus-g74sx-rh71.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_7_Toshiba_X770_01J" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\7-toshiba-x770-01j.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_8_HP_nx6125" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\8-hp-nx6125.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_9_Lenovo_T61" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\9-lenovo-t61.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

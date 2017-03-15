@@ -43,7 +43,7 @@ namespace Assignment4
                 this.dollorComputerDataGridView.DataSource = (from product in productContext.products select product).ToList();
                 if (product != null) // when from ProductInfoForm
                 {
-                    selectRow(product.productID);
+                    _selectRow(product.productID);
                 }
             }
             catch (Exception exception)
@@ -51,7 +51,7 @@ namespace Assignment4
                 MessageBox.Show(exception.Message);
             }
         }
-        private void selectRow(short productID)
+        private void _selectRow(short productID)
         {
             // change color for selected row
             foreach (DataGridViewRow rowTemp in dollorComputerDataGridView.Rows)
@@ -94,7 +94,7 @@ namespace Assignment4
         {
             DataGridViewRow row = dollorComputerDataGridView.CurrentRow;
             short productID = short.Parse(row.Cells[0].Value.ToString());
-            selectRow(productID);
+            _selectRow(productID);
         }
     }
 }
