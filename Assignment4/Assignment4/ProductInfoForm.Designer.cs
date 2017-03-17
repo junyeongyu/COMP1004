@@ -78,6 +78,8 @@
             this.cancelButton = new System.Windows.Forms.Button();
             this.clickNextToConfirmLabel = new System.Windows.Forms.Label();
             this.selectAnotherProductButton = new System.Windows.Forms.Button();
+            this.productOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.productSaveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.selectFormMenuStrip.SuspendLayout();
             this.parentTableLayoutPanel.SuspendLayout();
             this.upTableLayoutPanel.SuspendLayout();
@@ -114,21 +116,23 @@
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.openToolStripMenuItem.Text = "&Open";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.saveToolStripMenuItem.Text = "&Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.X)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.cancelButton_Click);
             // 
@@ -651,6 +655,10 @@
             this.selectAnotherProductButton.UseVisualStyleBackColor = true;
             this.selectAnotherProductButton.Click += new System.EventHandler(this.selectAnotherProductButton_Click);
             // 
+            // productOpenFileDialog
+            // 
+            this.productOpenFileDialog.FileName = "openFileDialog1";
+            // 
             // ProductInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -733,5 +741,7 @@
         private System.Windows.Forms.Button nextButton;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Button selectAnotherProductButton;
+        private System.Windows.Forms.OpenFileDialog productOpenFileDialog;
+        private System.Windows.Forms.SaveFileDialog productSaveFileDialog;
     }
 }

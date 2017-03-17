@@ -33,6 +33,7 @@
             this.openSavedOrderButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
             this.orderYourPictureBox = new System.Windows.Forms.PictureBox();
+            this.productOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.orderYourPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,6 +87,10 @@
             this.orderYourPictureBox.TabIndex = 1;
             this.orderYourPictureBox.TabStop = false;
             // 
+            // productOpenFileDialog
+            // 
+            this.productOpenFileDialog.FileName = "openFileDialog1";
+            // 
             // StartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -113,6 +118,7 @@
         private System.Windows.Forms.Button startNewOrderButton;
         private System.Windows.Forms.Button openSavedOrderButton;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.OpenFileDialog productOpenFileDialog;
     }
 }
 

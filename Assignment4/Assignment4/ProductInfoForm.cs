@@ -8,6 +8,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Assignment4
@@ -82,6 +83,35 @@ namespace Assignment4
                 orderForm.refreshData();
             }
             orderForm.Show();
+        }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            productOpenFileDialog.Filter = "Text Files|*.txt";
+            productOpenFileDialog.Title = "Select a Your Order File.";
+            if (productOpenFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                if (productOpenFileDialog.FileName.Trim() != string.Empty)
+                {
+                    StreamReader r = new StreamReader(productOpenFileDialog.FileName);
+                    string text = r.ReadToEnd();
+                    MessageBox.Show(text);
+                }
+            }
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            productSaveFileDialog.Filter = "Text Files|*.txt";
+            productSaveFileDialog.Title = "Save a Your Order Information.";
+            if (productSaveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                if (productSaveFileDialog.FileName.Trim() != string.Empty)
+                {
+                    StreamWriter w = new StreamWriter(productSaveFileDialog.FileName);
+                    w.Close();
+                }
+            }
         }
     }
 }
