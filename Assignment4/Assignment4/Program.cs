@@ -11,7 +11,7 @@ using Assignment4.Models;
 *  - 00:40 AM, Mar 14, 2017: Finish All functions of SelectForm.
 *  - 00:40 AM, Mar 15, 2017: Finish All functions of ProductInfoForm except of file process. AboutForm in OrderForm is made.
 *  - 02:20 AM, Mar 15, 2017: Add all necessary images & update picture box in OrderForm
-*  - 00:00 PM, Mar 07, 2017: 
+*  - 12:30 PM, Mar 17, 2017: Finish all functionalities except file process.
 *  - 00:00 PM, Mar 07, 2017: 
 *  - 00:00 PM, Mar 07, 2017: 
 *  - 00:00 PM, Mar 07, 2017: 
@@ -68,7 +68,8 @@ namespace Assignment4
             productInfoForm.orderForm = orderForm; // to move to order form
 
             orderForm.splashScreen = splashScreen; // for closing form
-            orderForm.productInfoForm = productInfoForm; // to get product information
+            orderForm.productInfoForm = productInfoForm; // to get product information / to move back
+            
 
             return splashScreen;
         }

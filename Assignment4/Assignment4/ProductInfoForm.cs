@@ -77,6 +77,10 @@ namespace Assignment4
         private void nextButton_Click(object sender, EventArgs e)
         {
             Hide();
+            if (orderForm.isLoaded)
+            {
+                orderForm.refreshData();
+            }
             orderForm.Show();
         }
     }

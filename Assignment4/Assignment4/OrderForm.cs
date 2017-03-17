@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,7 @@ namespace Assignment4
     public partial class OrderForm : Form
     {
         private SplashScreen _splashScreen; // injected - to close form
-        private ProductInfoForm _productInfoForm; // injected - to get product information
+        private ProductInfoForm _productInfoForm; // injected - to get product information / to move back
         private Boolean _isLoaded; //  // to check whether form is loaded
 
         public SplashScreen splashScreen { get; set; }
@@ -39,7 +40,47 @@ namespace Assignment4
         }
         public void refreshData()
         {
+            _bindData();
+            _calculatePrice();
             _bindImages();
+        }
+        private void _bindData()
+        {
+            Product product = productInfoForm.product;
+            StringBuilder sb = new StringBuilder();
+            String doubleNewLine = Environment.NewLine + Environment.NewLine;
+
+            conditionTextBox.Text = product.condition;
+            platformTextBox.Text = product.platform;
+            manufacturerTextBox.Text = product.manufacturer;
+            modelTextBox.Text = product.model;
+
+            sb.Append(product.screensize + doubleNewLine);
+            sb.Append(product.RAM_size + doubleNewLine);
+            sb.Append(product.CPU_brand + doubleNewLine);
+            sb.Append(product.CPU_type + doubleNewLine);
+            sb.Append(product.CPU_number + doubleNewLine);
+            sb.Append(product.CPU_speed + doubleNewLine);
+            sb.Append(product.HDD_size + doubleNewLine);
+            sb.Append(product.GPU_Type + doubleNewLine);
+            sb.Append(product.webcam + doubleNewLine);
+            sb.Append(product.OS);
+            productTextBox.Text = sb.ToString();
+        }
+        private void _calculatePrice()
+        {
+            Product product = productInfoForm.product;
+            double cost = Convert.ToDouble(product.cost); // for convenience of calculation
+            double saleTax = cost * 0.13;
+            double total = cost + saleTax;
+
+            priceTextBox.Text = _formatCurrency(cost);
+            salesTaxTextBox.Text = _formatCurrency(saleTax);
+            totalTextBox.Text = _formatCurrency(total);
+        }
+        private string _formatCurrency(double number)
+        {
+            return String.Format(new CultureInfo("en-US"), "{0:C}", number);
         }
         private void _bindImages()
         {
@@ -71,5 +112,34 @@ namespace Assignment4
             productPictureBox.Image = bitmap;
         }
 
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Bitmap img = new Bitmap(Width, Height);
+            DrawToBitmap(img, new Rectangle(0, 0, Width, Height));
+            img.Save("screenshot.png"); // location: bin/debug/screenshot.png
+            img.Dispose();
+            MessageBox.Show("You Printed current information (into file - screenshot.png)");
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            Hide();
+            productInfoForm.Show();
+        }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            splashScreen.Close();
+        }
+
+        private void finishButton_Click(object sender, EventArgs e)
+        {
+            String doubleNewLine = Environment.NewLine + Environment.NewLine;
+            String text = "Thank you for your order !!" + doubleNewLine;
+            text += "Your order will be processed in 7 - 10 business days." + doubleNewLine;
+            text += "Have a great day !!";
+            MessageBox.Show(text);
+            splashScreen.Close();
+        }
     }
 }

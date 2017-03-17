@@ -48,7 +48,7 @@
             this.manufacturerTextBox = new System.Windows.Forms.TextBox();
             this.systemComponentsDownGroupBox = new System.Windows.Forms.GroupBox();
             this.systemComponentsDownTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.productTextBox = new System.Windows.Forms.TextBox();
             this.systemComponentsDownLeftTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.webCamLabel = new System.Windows.Forms.Label();
             this.osLabel = new System.Windows.Forms.Label();
@@ -110,15 +110,17 @@
             // 
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
             this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.P)));
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.printToolStripMenuItem.Text = "&Print";
+            this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.X)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -133,8 +135,9 @@
             // 
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
             this.backToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.B)));
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.backToolStripMenuItem.Text = "&Back";
+            this.backToolStripMenuItem.Click += new System.EventHandler(this.backButton_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -280,7 +283,7 @@
             this.systemComponentsDownTableLayoutPanel.ColumnCount = 2;
             this.systemComponentsDownTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.systemComponentsDownTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
-            this.systemComponentsDownTableLayoutPanel.Controls.Add(this.textBox1, 1, 0);
+            this.systemComponentsDownTableLayoutPanel.Controls.Add(this.productTextBox, 1, 0);
             this.systemComponentsDownTableLayoutPanel.Controls.Add(this.systemComponentsDownLeftTableLayoutPanel, 0, 0);
             this.systemComponentsDownTableLayoutPanel.Location = new System.Drawing.Point(6, 14);
             this.systemComponentsDownTableLayoutPanel.Name = "systemComponentsDownTableLayoutPanel";
@@ -290,16 +293,16 @@
             this.systemComponentsDownTableLayoutPanel.Size = new System.Drawing.Size(381, 277);
             this.systemComponentsDownTableLayoutPanel.TabIndex = 0;
             // 
-            // textBox1
+            // productTextBox
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox1.Location = new System.Drawing.Point(98, 7);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(280, 262);
-            this.textBox1.TabIndex = 13;
-            this.textBox1.Text = "lcd\r\n\r\nmemory\r\n\r\ncpu brand\r\n\r\ncpu type\r\n\r\ncpu number\r\n\r\ncpu speed\r\n\r\nhdd\r\n\r\ngpu t" +
+            this.productTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.productTextBox.Location = new System.Drawing.Point(98, 7);
+            this.productTextBox.Multiline = true;
+            this.productTextBox.Name = "productTextBox";
+            this.productTextBox.ReadOnly = true;
+            this.productTextBox.Size = new System.Drawing.Size(280, 262);
+            this.productTextBox.TabIndex = 13;
+            this.productTextBox.Text = "lcd\r\n\r\nmemory\r\n\r\ncpu brand\r\n\r\ncpu type\r\n\r\ncpu number\r\n\r\ncpu speed\r\n\r\nhdd\r\n\r\ngpu t" +
     "ype\r\n\r\nwebcam\r\n\r\nos";
             // 
             // systemComponentsDownLeftTableLayoutPanel
@@ -556,6 +559,7 @@
             this.cancelButton.TabIndex = 19;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // backButton
             // 
@@ -565,6 +569,7 @@
             this.backButton.TabIndex = 20;
             this.backButton.Text = "Back";
             this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // finishButton
             // 
@@ -574,6 +579,7 @@
             this.finishButton.TabIndex = 21;
             this.finishButton.Text = "Finish";
             this.finishButton.UseVisualStyleBackColor = true;
+            this.finishButton.Click += new System.EventHandler(this.finishButton_Click);
             // 
             // productPictureBox
             // 
@@ -655,7 +661,7 @@
         private System.Windows.Forms.TextBox manufacturerTextBox;
         private System.Windows.Forms.TextBox modelTextBox;
         private System.Windows.Forms.Label modelLabel;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox productTextBox;
         private System.Windows.Forms.PictureBox productPictureBox;
         private System.Windows.Forms.GroupBox yourPriceGroupBox;
         private System.Windows.Forms.Button cancelButton;
