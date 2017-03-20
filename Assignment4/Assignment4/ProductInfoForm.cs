@@ -10,18 +10,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Assignment4
 {
     public partial class ProductInfoForm : Form
     {
         private SplashScreen _splashScreen; // injected - to close form
+        private StartForm _startForm; // injected - // for start form to use productInfoForm' open file event handler
         private Product _product; // injected by previous form
         private SelectForm _selectForm; // injected - to move select form
         private OrderForm _orderForm; // injected - to move order form
         private Boolean _isLoaded = false; // to check whether form is loaded
 
         public SplashScreen splashScreen { get; set; }
+        public StartForm startForm { get; set; }
         public Product product { get; set; }
         public SelectForm selectForm { get; set; }
         public OrderForm orderForm { get; set; }
@@ -62,9 +65,9 @@ namespace Assignment4
         private void selectAnotherProductButton_Click(object sender, EventArgs e)
         {
             Hide();
+            selectForm.product = product;
             if (selectForm.isLoaded)
             {
-                selectForm.product = product;
                 selectForm.refreshData();
             }
             selectForm.Show();
@@ -85,7 +88,7 @@ namespace Assignment4
             orderForm.Show();
         }
 
-        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        public void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             productOpenFileDialog.Filter = "Text Files|*.txt";
             productOpenFileDialog.Title = "Select a Your Order File.";
@@ -93,10 +96,22 @@ namespace Assignment4
             {
                 if (productOpenFileDialog.FileName.Trim() != string.Empty)
                 {
-                    StreamReader r = new StreamReader(productOpenFileDialog.FileName);
-                    string text = r.ReadToEnd();
-                    MessageBox.Show(text);
+                    FileStream fileStream = new FileStream(productOpenFileDialog.FileName, FileMode.Open, FileAccess.Read, FileShare.Read);
+                    product = (Product) new BinaryFormatter().Deserialize(fileStream);
+                    refreshData();
                 }
+                
+                // When from StartForm, start form needs to be closed & show this class form
+                if (sender is Button)
+                {
+                    Button button = sender as Button;                    
+                    if (button == startForm.openSavedOrderButton)
+                    {
+                        startForm.Hide();
+                        Show();
+                    }
+                }
+
             }
         }
 
@@ -104,12 +119,13 @@ namespace Assignment4
         {
             productSaveFileDialog.Filter = "Text Files|*.txt";
             productSaveFileDialog.Title = "Save a Your Order Information.";
+            productSaveFileDialog.FileName = "Product.txt";
             if (productSaveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 if (productSaveFileDialog.FileName.Trim() != string.Empty)
                 {
-                    StreamWriter w = new StreamWriter(productSaveFileDialog.FileName);
-                    w.Close();
+                    FileStream fileStream = new FileStream(productSaveFileDialog.FileName, FileMode.Create, FileAccess.Write, FileShare.None);
+                    new BinaryFormatter().Serialize(fileStream, product);
                 }
             }
         }

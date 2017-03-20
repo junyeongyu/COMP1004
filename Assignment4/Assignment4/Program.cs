@@ -58,12 +58,14 @@ namespace Assignment4
 
             startForm.splashScreen = splashScreen; // for closing form
             startForm.selectForm = selectForm; // for next step
+            startForm.productInfoForm = productInfoForm; // for next step
 
             selectForm.splashScreen = splashScreen; // for closing form
             selectForm.productInfoForm = productInfoForm; // for next step
             selectForm.productContext = productContext; // for loading data from db
 
             productInfoForm.splashScreen = splashScreen; // for closing form
+            productInfoForm.startForm = startForm; // for start form to use productInfoForm' open file event handler
             productInfoForm.selectForm = selectForm; // to move to select form
             productInfoForm.orderForm = orderForm; // to move to order form
 

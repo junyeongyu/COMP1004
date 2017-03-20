@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartForm));
             this.orderYourComputerLabel = new System.Windows.Forms.Label();
             this.startNewOrderButton = new System.Windows.Forms.Button();
             this.openSavedOrderButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
             this.orderYourPictureBox = new System.Windows.Forms.PictureBox();
-            this.productOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.orderYourPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,10 +87,6 @@
             this.orderYourPictureBox.TabIndex = 1;
             this.orderYourPictureBox.TabStop = false;
             // 
-            // productOpenFileDialog
-            // 
-            this.productOpenFileDialog.FileName = "openFileDialog1";
-            // 
             // StartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -102,6 +98,7 @@
             this.Controls.Add(this.startNewOrderButton);
             this.Controls.Add(this.orderYourPictureBox);
             this.Controls.Add(this.orderYourComputerLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StartForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome to Dollor Computer!";
@@ -116,9 +113,8 @@
         private System.Windows.Forms.Label orderYourComputerLabel;
         private System.Windows.Forms.PictureBox orderYourPictureBox;
         private System.Windows.Forms.Button startNewOrderButton;
-        private System.Windows.Forms.Button openSavedOrderButton;
+        public System.Windows.Forms.Button openSavedOrderButton;
         private System.Windows.Forms.Button exitButton;
-        private System.Windows.Forms.OpenFileDialog productOpenFileDialog;
     }
 }
 

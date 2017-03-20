@@ -6,6 +6,7 @@ namespace Assignment4.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
+    [Serializable]
     public partial class Product
     {
         public short productID { get; set; }

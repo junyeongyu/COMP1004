@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelectForm));
             this.dollorComputerLabel = new System.Windows.Forms.Label();
             this.yourSelectionLabel = new System.Windows.Forms.Label();
             this.dollorComputerDataGridView = new System.Windows.Forms.DataGridView();
@@ -111,6 +112,7 @@
             this.Controls.Add(this.dollorComputerDataGridView);
             this.Controls.Add(this.yourSelectionLabel);
             this.Controls.Add(this.dollorComputerLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SelectForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Select Your Computer";

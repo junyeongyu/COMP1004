@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
+using Assignment4.Models;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Assignment4
 {
@@ -15,9 +17,11 @@ namespace Assignment4
     {
         private SplashScreen _splashScreen; // injected - to close form
         private SelectForm _selectForm; // injected - next form
+        private ProductInfoForm _projectInfoForm; // injected - next form
         
         public SplashScreen splashScreen { get; set; }
         public SelectForm selectForm { get; set; }
+        public ProductInfoForm productInfoForm { get; set; }
         
         public StartForm()
         {
@@ -32,17 +36,7 @@ namespace Assignment4
 
         private void openSavedOrderButton_Click(object sender, EventArgs e)
         {
-            productOpenFileDialog.Filter = "Text Files|*.txt";
-            productOpenFileDialog.Title = "Select a Your Order File.";
-            if (productOpenFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                if (productOpenFileDialog.FileName.Trim() != string.Empty)
-                {
-                    StreamReader r = new StreamReader(productOpenFileDialog.FileName);
-                    string text = r.ReadToEnd();
-                    MessageBox.Show(text);
-                }
-            }
+            productInfoForm.openToolStripMenuItem_Click(sender, e);
         }
 
         private void exitButton_Click(object sender, EventArgs e)
