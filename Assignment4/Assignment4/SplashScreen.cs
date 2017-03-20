@@ -2,7 +2,7 @@
  * The class name: SplashScreen
  * Author's name: Junyeong Yu (200328206)
  * Class Creation Date: March 7, 2017
- * Class Last Modification Date: March 7, 2017
+ * Class Last Modification Date: March 20, 2017
  * Class description: SplashScreen Form before loading main form.
  */
 using System;

@@ -1,4 +1,11 @@
-﻿using Assignment4.Models;
+﻿/**
+* The class name: ProductInfoForm
+* Author's name: Junyeong Yu (200328206)
+* Class Creation Date: March 7, 2017
+* Class Last Modification Date: March 20, 2017
+* Class description: ProductInfoForm class shows detail information of product
+*/
+using Assignment4.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,20 +37,32 @@ namespace Assignment4
         public OrderForm orderForm { get; set; }
         public Boolean isLoaded { get; set; }
 
+        /// <summary>
+        /// Default constructor to initialize component
+        /// </summary>
         public ProductInfoForm()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// When form is loaded, all data are bound with all necessary components
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ProductInfoForm_Load(object sender, EventArgs e)
         {
             refreshData();
             isLoaded = true;
         }
+        /// <summary>
+        /// Whenever user move the form, all neccesary data are bound with components
+        /// </summary>
         public void refreshData()
         {
             productIdTextBox.Text = Convert.ToString(product.productID);
             conditionTextBox.Text = product.condition;
+            // add culture format for currency
             costTextBox.Text = String.Format(new CultureInfo("en-US"), "{0:C}", product.cost);
             platformTextBox.Text = product.platform;
             osTextBox.Text = product.OS;
@@ -62,22 +81,37 @@ namespace Assignment4
             nextButton.Enabled = true;
         }
 
+        /// <summary>
+        /// Move into prevous form and send current product data
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void selectAnotherProductButton_Click(object sender, EventArgs e)
         {
             Hide();
             selectForm.product = product;
-            if (selectForm.isLoaded)
+            if (selectForm.isLoaded) // when form is already loaded, data needs to be refreshed
             {
                 selectForm.refreshData();
             }
             selectForm.Show();
         }
 
+        /// <summary>
+        /// Close the application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cancelButton_Click(object sender, EventArgs e)
         {
             splashScreen.Close();
         }
 
+        /// <summary>
+        /// Move to order form to finalize order
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void nextButton_Click(object sender, EventArgs e)
         {
             Hide();
@@ -88,6 +122,11 @@ namespace Assignment4
             orderForm.Show();
         }
 
+        /// <summary>
+        /// open the file of product information which user save before
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             productOpenFileDialog.Filter = "Text Files|*.txt";
@@ -115,6 +154,11 @@ namespace Assignment4
             }
         }
 
+        /// <summary>
+        /// Save the file of information for user to load data in furture
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             productSaveFileDialog.Filter = "Text Files|*.txt";

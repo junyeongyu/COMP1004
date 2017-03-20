@@ -12,9 +12,8 @@ using Assignment4.Models;
 *  - 00:40 AM, Mar 15, 2017: Finish All functions of ProductInfoForm except of file process. AboutForm in OrderForm is made.
 *  - 02:20 AM, Mar 15, 2017: Add all necessary images & update picture box in OrderForm
 *  - 12:30 PM, Mar 17, 2017: Finish all functionalities except file process.
-*  - 00:00 PM, Mar 07, 2017: 
-*  - 00:00 PM, Mar 07, 2017: 
-*  - 00:00 PM, Mar 07, 2017: 
+*  - 02:30 PM, Mar 20, 2017: Include all functionalities including file treatment & application icon
+*  - 03:00 PM, Mar 20, 2017: Add all necessary comments
 * App description: Create a multi-form project that simulates a computer purchase. 
 *                  Give the user an option to “start a new order” or “load a saved order”
 */

@@ -1,4 +1,11 @@
-﻿using Assignment4.Models;
+﻿/**
+* The class name: SelectForm
+* Author's name: Junyeong Yu (200328206)
+* Class Creation Date: March 7, 2017
+* Class Last Modification Date: March 20, 2017
+* Class description: SelectForm class shows list of product and offers interface to choose product
+*/
+using Assignment4.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,8 +23,8 @@ namespace Assignment4
         private SplashScreen _splashScreen; // injected - to close form
         private ProductInfoForm _productInfoForm; //injected - for next step
         private ProductContext _productContext; // injected - for loading data
-        private Product _product;
-        private Boolean _isLoaded = false;
+        private Product _product; // injected by previous form
+        private Boolean _isLoaded = false; // to check whether form is loaded already
 
         public SplashScreen splashScreen { get; set; }
         public ProductInfoForm productInfoForm { get; set; }
@@ -25,17 +32,27 @@ namespace Assignment4
         public Product product { get; set; }
         public Boolean isLoaded { get; set; }
 
+        /// <summary>
+        /// Default constructor
+        /// </summary>
         public SelectForm()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// When form is load, necessary data are bound with components
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SelectForm_Load(object sender, EventArgs e)
         {
-            //this.productsTableAdapter.Fill(this._comp_1004DataSet.products);
             refreshData();
             isLoaded = true;
         }
+        /// <summary>
+        /// Whenever user come to this form, data is refreshed
+        /// </summary>
         public void refreshData()
         {
             try
@@ -51,6 +68,10 @@ namespace Assignment4
                 MessageBox.Show(exception.Message);
             }
         }
+        /// <summary>
+        /// Select proper row and change the color of row
+        /// </summary>
+        /// <param name="productID"></param>
         private void _selectRow(short productID)
         {
             // change color for selected row
@@ -74,11 +95,21 @@ namespace Assignment4
 
         }
 
+        /// <summary>
+        /// Close the application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cancelButton_Click(object sender, EventArgs e)
         {
             splashScreen.Close();
         }
 
+        /// <summary>
+        /// Move to product information form to see detail information of product
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void nextButton_Click(object sender, EventArgs e)
         {
             Hide();
@@ -90,6 +121,11 @@ namespace Assignment4
             productInfoForm.Show();
         }
 
+        /// <summary>
+        /// When user select any of cell, the row of the cell is selected
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dollorComputerDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow row = dollorComputerDataGridView.CurrentRow;

@@ -1,4 +1,11 @@
-﻿using Assignment4.Models;
+﻿/**
+* The class name: OrderForm
+* Author's name: Junyeong Yu (200328206)
+* Class Creation Date: March 7, 2017
+* Class Last Modification Date: March 20, 2017
+* Class description: Order Form to order a computer or a labtop from what user chooses
+*/
+using Assignment4.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,28 +29,47 @@ namespace Assignment4
         public ProductInfoForm productInfoForm { get; set; }
         public Boolean isLoaded { get; set; }
 
+        /// <summary>
+        /// Default constructor
+        /// </summary>
         public OrderForm()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// To load about form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AboutForm aboutForm = new AboutForm();
             aboutForm.ShowDialog();
         }
 
+        /// <summary>
+        /// When all compoenents is loaded, all data will be bound with components
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OrderForm_Load(object sender, EventArgs e)
         {
             refreshData();
             isLoaded = true;
         }
+        /// <summary>
+        /// Whenever user move the form, every data will be refreshed
+        /// </summary>
         public void refreshData()
         {
             _bindData();
             _calculatePrice();
             _bindImages();
         }
+        /// <summary>
+        /// Bind data with components
+        /// </summary>
         private void _bindData()
         {
             Product product = productInfoForm.product;
@@ -67,6 +93,9 @@ namespace Assignment4
             sb.Append(product.OS);
             productTextBox.Text = sb.ToString();
         }
+        /// <summary>
+        /// Calculate price of product
+        /// </summary>
         private void _calculatePrice()
         {
             Product product = productInfoForm.product;
@@ -78,10 +107,18 @@ namespace Assignment4
             salesTaxTextBox.Text = _formatCurrency(saleTax);
             totalTextBox.Text = _formatCurrency(total);
         }
+        /// <summary>
+        /// Provide currency format
+        /// </summary>
+        /// <param name="number"></param>
+        /// <returns></returns>
         private string _formatCurrency(double number)
         {
             return String.Format(new CultureInfo("en-US"), "{0:C}", number);
         }
+        /// <summary>
+        /// Bind image with picture box component
+        /// </summary>
         private void _bindImages()
         {
             Product product = productInfoForm.product;
@@ -112,6 +149,11 @@ namespace Assignment4
             productPictureBox.Image = bitmap;
         }
 
+        /// <summary>
+        /// Provide print function and save the file in specific location
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void printToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Bitmap img = new Bitmap(Width, Height);
@@ -121,17 +163,32 @@ namespace Assignment4
             MessageBox.Show("You Printed current information (into file - screenshot.png)");
         }
 
+        /// <summary>
+        /// Move to back form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void backButton_Click(object sender, EventArgs e)
         {
             Hide();
             productInfoForm.Show();
         }
 
+        /// <summary>
+        /// Close the application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cancelButton_Click(object sender, EventArgs e)
         {
             splashScreen.Close();
         }
 
+        /// <summary>
+        /// Finish user order and close the application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void finishButton_Click(object sender, EventArgs e)
         {
             String doubleNewLine = Environment.NewLine + Environment.NewLine;
